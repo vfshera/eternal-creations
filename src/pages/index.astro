@@ -8,7 +8,7 @@ import Preloader from "../components/Preloader.astro";
   <Navigation />
   <Preloader />
 
-  <div data-scroll-container class="overflow-hidden">
+  <div data-scroll-container class="overflow-hidden isolate">
     {/* HERO */}
     <div data-scroll-section class="relative h-[110vh] overflow-hidden">
       <div
@@ -82,9 +82,8 @@ import Preloader from "../components/Preloader.astro";
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- 
+    <!-- 
 <div data-scroll-section class="pb-[400px] overflow-hidden">
 	<div data-scroll data-scroll-speed="-2" class="px-[5rem] max-w-[120rem] mx-auto hoverable" aria-label="About Us">
 		<img alt="" src="https://eternalcreations.net/wp-content/uploads/2022/08/Discord_Render.png" />
@@ -92,108 +91,108 @@ import Preloader from "../components/Preloader.astro";
 </div>
 -->
 
-  <div data-scroll-section>
-    <div
-      class="swiper mb-16 pb-[200px] pl-[5rem] max-w-[120rem] overflow-visible"
-    >
+    <div data-scroll-section>
       <div
-        class="py-[100px] flex flex-col justify-center items-center lg:flex-row lg:justify-between"
+        class="swiper mb-16 pb-[200px] pl-[5rem] max-w-[120rem] overflow-visible"
       >
-        <div class="text-center lg:text-left">
-          <p class="text-[2.5rem] my-16 max-w-[80rem]">
-            <span class="block">We build amazing worlds. Every day.</span>
-            <span class="block"
-              >Here is a selection of our personal favorites.</span
-            >
-          </p>
-          <a
-            href="/projects"
-            class="block my-6 w-fit btn large group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-4 px-8 hover:border-[#9C44FC]"
-            style="transition: border .3s ease .05s;"
-          >
-            <span class="relative text-[1.85rem] z-10"
-              >Explore All Our Worlds</span
-            >
-          </a>
-        </div>
-
-        <h1
-          class="text-8xl text-center lg:text-right font-black uppercase pl-4 lg:pl-5"
+        <div
+          class="py-[100px] flex flex-col justify-center items-center lg:flex-row lg:justify-between"
         >
-          <span class="block">Some Of</span>
-          <span class="block mt-2 text-[#9C44FC]">Our Work</span>
-        </h1>
-      </div>
+          <div class="text-center lg:text-left">
+            <p class="text-[2.5rem] my-16 max-w-[80rem]">
+              <span class="block">We build amazing worlds. Every day.</span>
+              <span class="block"
+                >Here is a selection of our personal favorites.</span
+              >
+            </p>
+            <a
+              href="/projects"
+              class="block my-6 w-fit btn large group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-4 px-8 hover:border-[#9C44FC]"
+              style="transition: border .3s ease .05s;"
+            >
+              <span class="relative text-[1.85rem] z-10"
+                >Explore All Our Worlds</span
+              >
+            </a>
+          </div>
 
-      <div class="swiper-wrapper pt-8">
-        <div class="swiper-slide w-full h-full">
-          <a
-            href="#"
-            class="flex flex-col justify-center w-full h-full hoverable"
-            aria-label="View"
+          <h1
+            class="text-8xl text-center lg:text-right font-black uppercase pl-4 lg:pl-5"
           >
-            <div class="w-full h-full mb-6">
-              <img
-                alt=""
-                src="/img/EW_keyArt-1024x576.png"
-                class="w-full h-ful object-left rounded-xl"
-              />
-            </div>
-            <div class="w-auto">
-              <h3 class="text-[2.25rem]">Extreme Weapons</h3>
-              <p class="pt-3 text-[1.2rem] opacity-60">
-                One of our amazing universes.
-              </p>
-            </div>
-          </a>
+            <span class="block">Some Of</span>
+            <span class="block mt-2 text-[#9C44FC]">Our Work</span>
+          </h1>
         </div>
 
-        <div class="swiper-slide w-full h-full">
-          <a href="#" class="flex flex-col justify-center w-full h-full">
-            <div class="w-full h-full mb-6">
-              <img
-                alt=""
-                src="/img/Hacker-Weapons-1024x576.png"
-                class="w-full h-ful object-left rounded-xl"
-              />
-            </div>
-            <div class="w-auto">
-              <h3 class="text-[2.25rem]">Hacker Weapons</h3>
-              <p class="pt-1 text-[1.2rem] opacity-60">
-                One of our amazing universes.
-              </p>
-            </div>
-          </a>
-        </div>
+        <div class="swiper-wrapper pt-8">
+          <div class="swiper-slide w-full h-full">
+            <a
+              href="#"
+              class="flex flex-col justify-center w-full h-full hoverable"
+              aria-label="View"
+            >
+              <div class="w-full h-full mb-6">
+                <img
+                  alt=""
+                  src="/img/EW_keyArt-1024x576.png"
+                  class="w-full h-ful object-left rounded-xl"
+                />
+              </div>
+              <div class="w-auto">
+                <h3 class="text-[2.25rem]">Extreme Weapons</h3>
+                <p class="pt-3 text-[1.2rem] opacity-60">
+                  One of our amazing universes.
+                </p>
+              </div>
+            </a>
+          </div>
 
-        <div class="swiper-slide w-full h-full">
-          <a href="#" class="flex flex-col justify-center w-full h-full">
-            <div class="w-full h-full mb-6">
-              <img
-                alt=""
-                src="/img/Magic-Fruits-KeyArt-1024x576.png"
-                class="w-full h-ful object-left rounded-xl"
-              />
-            </div>
-            <div class="w-auto">
-              <h3 class="text-[2.25rem]">Magic Fruits</h3>
-              <p class="pt-3 text-[1.2rem] opacity-60">
-                One of our amazing universes.
-              </p>
-            </div>
-          </a>
+          <div class="swiper-slide w-full h-full">
+            <a href="#" class="flex flex-col justify-center w-full h-full">
+              <div class="w-full h-full mb-6">
+                <img
+                  alt=""
+                  src="/img/Hacker-Weapons-1024x576.png"
+                  class="w-full h-ful object-left rounded-xl"
+                />
+              </div>
+              <div class="w-auto">
+                <h3 class="text-[2.25rem]">Hacker Weapons</h3>
+                <p class="pt-1 text-[1.2rem] opacity-60">
+                  One of our amazing universes.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide w-full h-full">
+            <a href="#" class="flex flex-col justify-center w-full h-full">
+              <div class="w-full h-full mb-6">
+                <img
+                  alt=""
+                  src="/img/Magic-Fruits-KeyArt-1024x576.png"
+                  class="w-full h-ful object-left rounded-xl"
+                />
+              </div>
+              <div class="w-auto">
+                <h3 class="text-[2.25rem]">Magic Fruits</h3>
+                <p class="pt-3 text-[1.2rem] opacity-60">
+                  One of our amazing universes.
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-scrollbar"></div>
       </div>
-      <div class="swiper-pagination"></div>
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <div class="swiper-scrollbar"></div>
     </div>
-  </div>
-  <!-- FOOTER -->
-  <!--
+    <!-- FOOTER -->
+    <!--
 <div data-scroll-section class="relative overflow-hidden" >
 	<div data-scroll data-scroll-speed="-4" data-scroll-position="bottom" class="bg-accent" style="height: 900px;">
 		<div class="py-16 px-2 lg:px-4 max-w-[60rem]">
@@ -207,34 +206,35 @@ import Preloader from "../components/Preloader.astro";
 	</div>	
 </div>
 -->
-  <footer data-scroll-section class="bg-[#9C44FC] py-16">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-3 gap-8">
-        <div>
-          <h1 class="text-4xl font-black text-white mb-6">Our Services</h1>
-          <p class="text-xl text-white">
-            Live-Events / Fundraisers / Promotions
-          </p>
-          <p class="text-xl text-white">
-            Game Development / World Creation / Multiplayer Servers
-          </p>
-          <p class="text-xl text-white">3D Animation / 3D Rendering</p>
-        </div>
-        <div>
-          <h1 class="text-4xl font-black text-white mb-6">Work With Us</h1>
-          <p class="text-xl text-white">eternal@creations.com</p>
-          <p class="text-xl text-white">Thies Boll</p>
-          <p class="text-xl text-white">Director and CEO</p>
-        </div>
-        <div>
-          <h1 class="text-4xl font-black text-white mb-6">Legal</h1>
-          <p class="text-xl text-white">Imprint</p>
-          <p class="text-xl text-white">Privacy Policy</p>
-          <p class="text-xl text-white">Terms of Service</p>
+    <footer data-scroll-section class="bg-[#9C44FC] py-16">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-3 gap-8">
+          <div>
+            <h1 class="text-4xl font-black text-white mb-6">Our Services</h1>
+            <p class="text-xl text-white">
+              Live-Events / Fundraisers / Promotions
+            </p>
+            <p class="text-xl text-white">
+              Game Development / World Creation / Multiplayer Servers
+            </p>
+            <p class="text-xl text-white">3D Animation / 3D Rendering</p>
+          </div>
+          <div>
+            <h1 class="text-4xl font-black text-white mb-6">Work With Us</h1>
+            <p class="text-xl text-white">eternal@creations.com</p>
+            <p class="text-xl text-white">Thies Boll</p>
+            <p class="text-xl text-white">Director and CEO</p>
+          </div>
+          <div>
+            <h1 class="text-4xl font-black text-white mb-6">Legal</h1>
+            <p class="text-xl text-white">Imprint</p>
+            <p class="text-xl text-white">Privacy Policy</p>
+            <p class="text-xl text-white">Terms of Service</p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </Layout>
 
 <style>
@@ -259,11 +259,13 @@ import Preloader from "../components/Preloader.astro";
   });
 
   swiper.on("progress", (e) => {});
-  /*
-	import LocomotiveScroll from 'locomotive-scroll';
-	const scroll = new LocomotiveScroll({
-    	el: document.querySelector('[data-scroll-container]'),
-    	smooth: true
-	});
-	*/
+
+  import LocomotiveScroll from "locomotive-scroll";
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
+  });
 </script>
