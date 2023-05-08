@@ -1,0 +1,103 @@
+<div class="fixed top-0 inset-x-0 w-full h-auto p-8 z-50">
+    <div class="absolute inset-x-0 inset-y-0 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0)] z-10"></div>
+    <div class="relative max-w-[120rem] mx-auto z-20">
+        <div class="flex justify-between items-center">
+            <a href="/" class="hoverable" aria-label="Home">
+                <img class="w-32 h-auto" alt="" src="/img/logo_white.png" />
+            </a>
+            <a id="navigation__button" class="btn group relative text-accent bg-white w-16 h-16 rounded-full flex justify-center items-center overflow-hidden">
+                <span class="relative text-xl font-semibold z-10 group-hover:text-white">
+                    <span class="bg-accent group-hover:bg-white" style="width: 26px;
+                    height: 2px;
+                    display: block;
+                    border-radius: 2px;
+                    transition: all 0.2s ease-out;"></span>
+                    <span class="bg-accent group-hover:bg-white" style="width: 26px;
+                    height: 2px;
+                    display: block;
+                    margin: 6px auto 0;
+                    border-radius: 2px;
+                    transition: all 0.2s ease-out;"></span>
+                </span>
+            </a>
+        </div>  
+    </div>
+</div>
+
+<div id="navigation" class="w-screen h-[30vh] bg-[#0c0f16] fixed inset-0 border-b-4 border-solid border-[#9C44FC] z-30">
+    <div class="flex justify-center items-center w-full h-full transition-opacity opacity-0">
+        <div class="max-w-[120rem] mx-auto w-full text-center">
+            <div>
+                <h1 class="text-4xl uppercase font-black">Home</h1>
+            </div>
+            <div class="mt-6">
+                <a href="/work" class="text-4xl uppercase font-black">Work</a>
+            </div>
+            <div class="mt-6">
+                <h1 class="text-4xl uppercase font-black">Jobs</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    #navigation {
+        transform: scaleY(0);
+        transform-origin: center top;
+        transition: transform .6s cubic-bezier(.19,1,.22,1);
+    }
+</style>
+
+<script>
+    document.getElementById('navigation__button').onclick = function() {
+        if (document.querySelector('#navigation > div').style.opacity == '1') {
+            document.getElementById('navigation').style.transform = 'scaleY(0)';
+            document.querySelector('#navigation > div').style.opacity = '0';
+        } else {
+            document.getElementById('navigation').style.transform = 'scaleY(1)';
+            document.querySelector('#navigation > div').style.opacity = '1';
+        }
+    }
+</script>
+
+
+<style is:global>
+.btn span {
+    transition: color .4s cubic-bezier(.66,0,.34,1)
+}
+
+.btn::after {
+    background: #9C44FC;
+    border-radius: 50%;
+    content: "";
+    height: 8rem;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: transform .4s cubic-bezier(.66,0,.34,1);
+    width: 150%;
+    z-index: 0;
+}
+
+.btn.large::after {
+    height: 12rem;
+}
+
+.btn:hover::after {
+    transform: translate(-50%,-55%);
+}
+
+.items a {
+    transition: all .4s cubic-bezier(.66,0,.34,1);
+}
+
+.items a:hover {
+    color: #9C44FC;
+    transform: translateY(-5px);
+}
+
+</style>

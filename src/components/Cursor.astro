@@ -1,0 +1,122 @@
+<!--
+<div class="__cursor">
+    <div class="cursor__ball">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+      <div style="width: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      line-height: 0.3rem;"></div>
+    </div>
+  </div>
+  -->
+  <!--
+  
+  <script>
+    import TweenMax from "gsap/all";
+
+    const $bigBall = document.querySelector(".cursor__ball");
+    const $hoverables = document.querySelectorAll(".hoverable");
+
+    // Listeners
+    document.body.addEventListener("mousemove", onMouseMove);
+    //document.body.addEventListener("change", onMouseDrag);
+    for (let i = 0; i < $hoverables.length; i++) {
+      $hoverables[i].addEventListener("mouseenter", onMouseHover);
+      $hoverables[i].addEventListener("mouseleave", onMouseHoverOut);
+    }
+
+    function onMouseDrag(e) {
+      console.log("DRAGGG")
+    }
+  
+    // Move the cursor
+    function onMouseMove(e) {
+      let smooth = 0.15;
+      
+      if ($bigBall.style.display !== "block") {
+        $bigBall.style.display = "block";
+        smooth = 0;
+      }
+  
+      TweenMax.to($bigBall, smooth, {
+        x: e.pageX - 13,
+        y: e.pageY - 13,
+      });
+    }
+  
+    // Hover an element
+    function onMouseHover() {
+      if (this.getAttribute("aria-label")) {
+        $bigBall.classList.remove("transparent");
+        $bigBall.querySelector("div").innerHTML = this.getAttribute("aria-label");
+      } else {
+        $bigBall.classList.add("transparent");
+      }
+      
+      TweenMax.to($bigBall, 0.3, {
+        scale: 4,
+      });
+    }
+    function onMouseHoverOut() {
+      $bigBall.classList.remove("transparent");
+      $bigBall.querySelector("div").innerHTML = "";
+    
+      TweenMax.to($bigBall, 0.3, {
+        scale: 1,
+      });
+    }
+  </script>
+   
+
+  .__cursor {
+      pointer-events: none;
+    }
+    .cursor__ball {
+      position: fixed;
+      top: 0;
+      left: 0;
+      mix-blend-mode: normal;
+      display: none;
+      z-index: 1000;
+    }
+    .cursor__ball.transparent {
+      mix-blend-mode: difference;
+    }
+    .cursor__ball:not(.transparent) circle {
+      fill: var(--color-cursor-active-background);
+    }
+    .cursor__ball circle {
+      fill: var(--color-cursor-background);
+    }
+    .cursor__ball div {
+      position: absolute;
+      top: 0px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--color-cursor-text-base);
+      font-size: 4px;
+      font-weight: 700;
+      font-weight: 600;
+      letter-spacing: -0.1em;
+      text-transform: uppercase; 
+    }
+
+  </style>   
+
+  <style is:global>
+    html,
+    body,
+    a,
+    a:hover {
+      cursor: none;
+    }
+  </style>
+

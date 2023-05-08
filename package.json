@@ -1,0 +1,28 @@
+{
+  "name": "@eternalcreations/website",
+  "author": "Raved#8329",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^3.1.1",
+    "astro": "^2.1.9",
+    "gsap": "^3.11.5",
+    "locomotive-scroll": "^4.1.4",
+    "swiper": "^9.2.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "description": "``` npm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/locomotive-scroll": "^4.1.0"
+  }
+}

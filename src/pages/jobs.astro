@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import LocomotiveScroll from 'locomotive-scroll';
+---
+
+<Layout>
+    <Navigation />
+  
+    <div data-scroll-section>
+      <div data-scroll data-scroll-speed="2" class="mx-auto mb-16 pb-[200px] pl-[5rem] max-w-[120rem]">
+        <div class="pt-[100px] pb-[200px]">
+          <h1 class="text-8xl font-black uppercase">
+            <span class="">We are always</span>
+            <span class="text-[#9C44FC]">looking for creative minds</span>
+          </h1>
+        </div>
+  
+        <div>
+          <div class="border-b border-gray-500 border-solid py-8">
+            <a href="#" class="flex justify-evenly items-center">
+              <h2 class="text-6xl">Creative Director</h2>
+              <p class="text-xl">Looking for a dream job in the gaming industry? Minecraft Marketplace is the place to be! We're a thriving business dedicated to creating amazing experiences for Minecraft players worldwide.</p>
+            </a>
+          </div>
+  
+          <div class="border-b border-gray-500 border-solid py-16">
+            <a href="#" class="flex justify-evenly items-center">
+              <h2 class="text-6xl">Director</h2>
+              <p class="text-xl">As a part of our team, you'll have the opportunity to work with a passionate and talented group of individuals who are constantly pushing the boundaries of what's possible in Minecraft. We value creativity, innovation, and a deep understanding of the Minecraft Marketplace.</p>
+            </a>
+          </div>
+  
+          <div class="border-b border-gray-500 border-solid py-16">
+            <a href="#" class="flex justify-evenly items-center">
+              <h2 class="text-6xl">Creative Director</h2>
+              <p class="text-xl">If you're a talented individual with a love for Minecraft and a desire to contribute to the ever-growing Minecraft community, we want to hear from you! Explore our current job openings and join us on this exciting journey of creativity and fun.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Footer -->
+<footer data-scroll-section class="bg-gray-900 py-16">
+    <div data-scroll class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="text-left">
+          <h3 class="text-2xl font-thin">Our Services</h3>
+          <p class="text-xl">Live-Events / Fundraisers / Promotions</p>
+          <p class="text-xl">Game Development / World Creation / Multiplayer Servers</p>
+          <p class="text-xl">3D Animation / 3D Rendering</p>
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-thin">Work with us</h3>
+          <p class="text-xl">eternal@creations.com</p>
+          <p class="text-xl">Thies Boll</p>
+          <p class="text-xl">Director and CEO</p>
+        </div>
+        <div class="text-right">
+          <h3 class="text-2xl font-thin">Legal</h3>
+          <p class="text-xl">Imprint</p>
+          <p class="text-xl">Privacy Policy</p>
+          <p class="text-xl">Terms of Service</p>
+        </div>
+      </div>
+      <form action="#" method="POST" class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <!-- Form fields go here -->
+      </form>
+    </div>
+  </footer>
+</Layout>
+
+  <script>
+import LocomotiveScroll from 'locomotive-scroll';
+
+window.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('[data-scroll-container]');
+
+  if (container) {
+    const scroll = new LocomotiveScroll({
+      el: container,
+      smooth: true, // Enable smooth scrolling
+    });
+
+    // Update Locomotive Scroll on page resize
+    window.addEventListener('resize', () => {
+      scroll.update();
+    });
+  }
+});
+  </script>
+  
+  
+
+

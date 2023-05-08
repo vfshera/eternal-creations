@@ -1,0 +1,22 @@
+<div id="preloader" class="w-screen h-screen bg-[#0c0f16] fixed inset-x-0 inset-y-0 z-50">
+    <div class="flex justify-center items-center w-full h-full transition-opacity">
+        <div class="w-64 h-auto">
+            <img class="w-full h-full" alt="" src="/img/logo_purple.png" />
+        </div>
+    </div>
+</div>
+
+<style>
+    #preloader {
+        transform: scaleY(1);
+        transform-origin: center top;
+        transition: transform .6s cubic-bezier(.19,1,.22,1);
+    }
+</style>
+
+<script>
+    setTimeout(function() {
+        document.getElementById('preloader').style.transform = 'scaleY(0)';
+        document.querySelector('#preloader > div').style.opacity = '0';
+    }, 800);
+</script>

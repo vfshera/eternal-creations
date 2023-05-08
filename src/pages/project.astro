@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout>
+	<Navigation />
+
+<div data-scroll-container class="overflow-hidden">
+
+	<div data-scroll-section class="relative h-[60vh] overflow-hidden">
+		<div data-scroll data-scroll-speed="-2" class="absolute inset-0 py-48 flex h-full justify-center items-center text-center flex-col gap-8 mx-auto z-30 w-full">
+			<h1 class="text-9xl text-white font-black uppercase">
+				<span class="block">Extreme</span>
+                <span class="block">Weapons</span>
+			</h1>
+		</div>
+		<div class="absolute inset-x-0 inset-y-0 w-full h-full bg-gradient-to-b from-[rgba(166,81,255,0.5)] to-[#9E42FF] z-20"></div>
+		<div class="absolute inset-x-0 inset-y-0 w-full h-full bg-gradient-to-b from-[rgba(0,81,0,0)] to-[#000] z-10"></div>
+            <img alt="" src="/img/EW_keyArt-1024x576.png" class="w-full h-full brightness-75 object-cover" />
+			{/*<video autoplay muted loop class="w-full h-full brightness-75 object-cover">
+				<source src="/video/video1.mp4" type="video/mp4" />
+            </video>*/}
+	</div>
+
+
+
+
+    <div data-scroll-section class="pb-[300vh]">
+        asdasd
+    </div>
+</div>
+
+
+
+</Layout>   
+
+<script>
+    	import LocomotiveScroll from 'locomotive-scroll';
+	const scroll = new LocomotiveScroll({
+    	el: document.querySelector('[data-scroll-container]'),
+    	smooth: true
+	});
+</script>
