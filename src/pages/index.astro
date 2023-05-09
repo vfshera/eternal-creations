@@ -277,8 +277,6 @@ import Preloader from "../components/Preloader.astro";
       const navOpen = navWrapper.dataset.open === "true";
       //   // add background when scrolled > 300px and navigation is closed
       header.dataset.showBg = `${t.scroll.y > 300 && !navOpen}`;
-
-      console.log(header.dataset);
     });
 
     // scroller.on("scroll", ScrollTrigger.update);
@@ -308,8 +306,6 @@ import Preloader from "../components/Preloader.astro";
       let pinWrapper = horizontalSection.querySelector(".pin-wrapper");
       let pinWrapperWidth = pinWrapper.offsetWidth;
       let horizontalScrollLength = pinWrapperWidth - window.innerWidth;
-
-      console.log(horizontalScrollLength, pinWrapperWidth);
 
       gsap.to(pinWrapper, {
         scrollTrigger: {

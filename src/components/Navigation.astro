@@ -58,8 +58,18 @@
     "#navigation-wrapper"
   ) as HTMLDivElement;
 
+  const header = document.querySelector("#nav-header") as HTMLDivElement;
+
   document.getElementById("navigation__button").onclick = () => {
+    //check is bg is shown
+    const headerHasBg = header.dataset.showBg === "true";
+
     navWrapper.dataset.open = `${!(navWrapper.dataset.open === "true")}`;
+
+    if (navWrapper.dataset.open === "true" && headerHasBg) {
+      // remove header bg if navigation is opened
+      header.dataset.showBg = "false";
+    }
   };
 </script>
 
@@ -87,7 +97,8 @@
     height: 12rem;
   }
 
-  .btn:hover::after {
+  .btn:hover::after,
+  .btn:active::after {
     transform: translate(-50%, -55%);
   }
 
