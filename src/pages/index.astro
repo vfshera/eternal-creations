@@ -10,7 +10,7 @@ import Preloader from "../components/Preloader.astro";
 
   <div data-scroll-container class="overflow-hidden isolate">
     {/* HERO */}
-    <div data-scroll-section class="relative h-[110vh] overflow-hidden">
+    <div class="relative h-[110vh] overflow-hidden">
       <div
         data-scroll
         data-scroll-speed="-2"
@@ -46,7 +46,7 @@ import Preloader from "../components/Preloader.astro";
     </div>
 
     {/* SECTION 2 */}
-    <div data-scroll-section class="relative z-30">
+    <div class="relative z-30">
       <div data-scroll class="">
         <div
           class="px-4 pt-16 pb-8 lg:px-6 lg:pt-32 lg:pb-16 max-w-[120rem] mx-auto flex flex-col"
@@ -91,41 +91,33 @@ import Preloader from "../components/Preloader.astro";
 </div>
 -->
 
-    <div data-scroll-section>
-      <div
-        class="swiper mb-16 pb-[200px] pl-[5rem] max-w-[120rem] overflow-visible"
-      >
-        <div
-          class="py-[100px] flex flex-col justify-center items-center lg:flex-row lg:justify-between"
-        >
-          <div class="text-center lg:text-left">
-            <p class="text-[2.5rem] my-16 max-w-[80rem]">
-              <span class="block">We build amazing worlds. Every day.</span>
-              <span class="block"
-                >Here is a selection of our personal favorites.</span
+    <div class="horizontal-scroll overflow-hidden left-0">
+      <div class="flex items-center mb-16 pb-[200px] pl-[5rem]">
+        <div class="pin-wrapper pt-8 grid grid-cols-[repeat(4,700px)] gap-10">
+          <div class="flex flex-col">
+            <h1 class="text-7xl font-black uppercase">
+              <span class="block">Some Of</span>
+              <span class="block mt-2 text-[#9C44FC]">Our Work</span>
+            </h1>
+            <div class="text-left">
+              <p class="text-[2.5rem] my-16 max-w-[80rem]">
+                <span class="block">We build amazing worlds. Every day.</span>
+                <span class="block"
+                  >Here is a selection of our personal favorites.</span
+                >
+              </p>
+              <a
+                href="/projects"
+                class="block my-6 w-fit btn large group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-4 px-8 hover:border-[#9C44FC]"
+                style="transition: border .3s ease .05s;"
               >
-            </p>
-            <a
-              href="/projects"
-              class="block my-6 w-fit btn large group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-4 px-8 hover:border-[#9C44FC]"
-              style="transition: border .3s ease .05s;"
-            >
-              <span class="relative text-[1.85rem] z-10"
-                >Explore All Our Worlds</span
-              >
-            </a>
+                <span class="relative text-[1.85rem] z-10"
+                  >Explore All Our Worlds</span
+                >
+              </a>
+            </div>
           </div>
-
-          <h1
-            class="text-8xl text-center lg:text-right font-black uppercase pl-4 lg:pl-5"
-          >
-            <span class="block">Some Of</span>
-            <span class="block mt-2 text-[#9C44FC]">Our Work</span>
-          </h1>
-        </div>
-
-        <div class="swiper-wrapper pt-8">
-          <div class="swiper-slide w-full h-full">
+          <div class="w-full h-full">
             <a
               href="#"
               class="flex flex-col justify-center w-full h-full hoverable"
@@ -147,7 +139,7 @@ import Preloader from "../components/Preloader.astro";
             </a>
           </div>
 
-          <div class="swiper-slide w-full h-full">
+          <div class="w-full h-full">
             <a href="#" class="flex flex-col justify-center w-full h-full">
               <div class="w-full h-full mb-6">
                 <img
@@ -165,7 +157,7 @@ import Preloader from "../components/Preloader.astro";
             </a>
           </div>
 
-          <div class="swiper-slide w-full h-full">
+          <div class="w-full h-full">
             <a href="#" class="flex flex-col justify-center w-full h-full">
               <div class="w-full h-full mb-6">
                 <img
@@ -183,12 +175,6 @@ import Preloader from "../components/Preloader.astro";
             </a>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <div class="swiper-scrollbar"></div>
       </div>
     </div>
     <!-- FOOTER -->
@@ -206,7 +192,7 @@ import Preloader from "../components/Preloader.astro";
 	</div>	
 </div>
 -->
-    <footer data-scroll-section class="bg-[#9C44FC] py-16">
+    <footer class="bg-[#9C44FC] py-16">
       <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-3 gap-8">
           <div>
@@ -246,26 +232,73 @@ import Preloader from "../components/Preloader.astro";
 </style>
 
 <script>
-  import Swiper from "swiper";
-  import "swiper/css";
-
-  const swiper = new Swiper(".swiper", {
-    initialSlide: 0,
-    slidesPerView: 1.6,
-    spaceBetween: 50,
-    centeredSlides: false,
-    speed: 500,
-    longSwipes: false,
-  });
-
-  swiper.on("progress", (e) => {});
-
   import LocomotiveScroll from "locomotive-scroll";
 
-  window.addEventListener("DOMContentLoaded", () => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  window.addEventListener("load", function () {
+    const pageContainer = document.querySelector("[data-scroll-container]");
+
+    const scroller = new LocomotiveScroll({
+      el: pageContainer,
       smooth: true,
+      getDirection: true,
     });
+
+    scroller.on("scroll", function (t) {
+      document.documentElement.setAttribute("data-direction", t.direction);
+    });
+
+    scroller.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy(pageContainer, {
+      scrollTop(value) {
+        return arguments.length
+          ? scroller.scrollTo(value, 0, 0)
+          : scroller.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {
+          left: 0,
+          top: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+      pinType: pageContainer.style.transform ? "transform" : "fixed",
+    });
+
+    // Pinning and horizontal scrolling
+
+    let horizontalSections = document.querySelectorAll(".horizontal-scroll");
+
+    horizontalSections.forEach((horizontalSection) => {
+      let pinWrapper = horizontalSection.querySelector(".pin-wrapper");
+      let pinWrapperWidth = pinWrapper.offsetWidth;
+      let horizontalScrollLength = pinWrapperWidth - window.innerWidth;
+
+      console.log(horizontalScrollLength, pinWrapperWidth);
+
+      gsap.to(pinWrapper, {
+        scrollTrigger: {
+          scroller: pageContainer,
+          scrub: true,
+          trigger: horizontalSection,
+          pin: true,
+          start: "top top",
+          end: () => `+=${pinWrapperWidth}`,
+          invalidateOnRefresh: true,
+        },
+        x: -horizontalScrollLength,
+        ease: "none",
+      });
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+    ScrollTrigger.refresh();
   });
 </script>
