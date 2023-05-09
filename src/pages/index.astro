@@ -47,31 +47,36 @@ import Preloader from "../components/Preloader.astro";
 
     {/* SECTION 2 */}
     <div class="relative z-30">
-      <div data-scroll class="">
-        <div
-          class="px-4 pt-16 pb-8 lg:px-6 lg:pt-32 lg:pb-16 max-w-[120rem] mx-auto flex flex-col"
-        >
-          <h1 class="text-4xl lg:text-8xl font-black uppercase">
-            <span class="block">We are</span>
-            <span class="block mt-2 text-[#9C44FC]">Eternal Creations</span>
-          </h1>
+      <div
+        class="px-4 pt-16 pb-8 lg:px-8 lg:pt-32 lg:pb-20 max-w-[120rem] mx-auto flex flex-col gap-14"
+      >
+        <h1 class="text-4xl lg:text-6xl font-black uppercase">
+          <span class="">We are</span>
+          <span class="text-[#9C44FC]">Eternal Creations</span>
+        </h1>
+        <div class="flex">
+          <div class="w-1/2 pb-10">
+            <div
+              class="h-[500px] rounded-xl w-full bg-slate-50/10 text-xl text-[#9C44FC]/60 grid place-content-center"
+            >
+              image placeholder
+            </div>
+          </div>
 
           <div
-            class="self-end inline-flex flex-col mt-16 lg:mt-32 mx-4 lg:mx-32 max-w-[60rem]"
+            class="flex flex-col justify-end mx-4 gap-6 lg:gap-14 pb-24 lg:mx-32 w-1/2"
           >
-            <div class="flex items-start mb-6 lg:mb-8">
-              <p class="text-lg lg:text-2xl text-left">
-                <span class="block"
-                  >A young team consisting of creative minds that are really
-                  passionate about Minecraft. It's our expression of art, we
-                  love to create stuff and bring joy to children.</span
-                >
+            <div class="flex items-start max-w-[80rem]">
+              <p class="text-lg lg:text-4xl lg:leading-[1.5]">
+                A young team consisting of creative minds that are really
+                passionate about Minecraft. It's our expression of art, we love
+                to create stuff and bring joy to children.
               </p>
             </div>
 
             <a
               href="/projects"
-              class="block w-fit my-12 lg:my-24 btn large group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-3 lg:py-4 px-6 lg:px-8 hover:border-[#9C44FC] text-left"
+              class="block w-fit group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-3 lg:py-4 px-6 lg:px-8 hover:border-[#9C44FC] text-left"
               style="transition: border .3s ease .05s;"
             >
               <span class="relative text-xl lg:text-[2rem] z-10"
@@ -83,8 +88,10 @@ import Preloader from "../components/Preloader.astro";
       </div>
     </div>
 
-    <div class="horizontal-scroll overflow-hidden left-0">
-      <div class="flex items-center mb-16 pb-[200px] pl-[5rem]">
+    <div
+      class="horizontal-scroll overflow-hidden left-0 max-w-[120rem] mx-auto"
+    >
+      <div class="flex items-center mb-16 pb-[200px] pl-8">
         <div class="pin-wrapper pt-8 grid grid-cols-[repeat(4,700px)] gap-10">
           <div class="flex flex-col">
             <h1 class="text-7xl font-black uppercase">
@@ -109,69 +116,63 @@ import Preloader from "../components/Preloader.astro";
               </a>
             </div>
           </div>
-          <div class="w-full h-full">
-            <a
-              href="#"
-              class="flex flex-col justify-center w-full h-full hoverable"
-              aria-label="View"
-            >
-              <div class="w-full h-full mb-6">
-                <img
-                  alt=""
-                  src="/img/EW_keyArt-1024x576.png"
-                  class="w-full h-ful object-left rounded-xl"
-                />
-              </div>
-              <div class="w-auto">
-                <h3 class="text-[2.25rem]">Extreme Weapons</h3>
-                <p class="pt-3 text-[1.2rem] opacity-60">
-                  One of our amazing universes.
-                </p>
-              </div>
-            </a>
-          </div>
+          <a
+            href="#"
+            class="flex flex-col justify-center w-full h-full hoverable"
+            aria-label="View"
+          >
+            <div class="w-full h-full mb-6">
+              <img
+                alt=""
+                src="/img/EW_keyArt-1024x576.png"
+                class="w-full h-ful object-left rounded-xl"
+              />
+            </div>
+            <div class="w-auto">
+              <h3 class="text-[2.25rem]">Extreme Weapons</h3>
+              <p class="pt-3 text-[1.2rem] opacity-60">
+                One of our amazing universes.
+              </p>
+            </div>
+          </a>
 
-          <div class="w-full h-full">
-            <a href="#" class="flex flex-col justify-center w-full h-full">
-              <div class="w-full h-full mb-6">
-                <img
-                  alt=""
-                  src="/img/Hacker-Weapons-1024x576.png"
-                  class="w-full h-ful object-left rounded-xl"
-                />
-              </div>
-              <div class="w-auto">
-                <h3 class="text-[2.25rem]">Hacker Weapons</h3>
-                <p class="pt-1 text-[1.2rem] opacity-60">
-                  One of our amazing universes.
-                </p>
-              </div>
-            </a>
-          </div>
+          <a href="#" class="flex flex-col justify-center w-full h-full">
+            <div class="w-full h-full mb-6">
+              <img
+                alt=""
+                src="/img/Hacker-Weapons-1024x576.png"
+                class="w-full h-ful object-left rounded-xl"
+              />
+            </div>
+            <div class="w-auto">
+              <h3 class="text-[2.25rem]">Hacker Weapons</h3>
+              <p class="pt-1 text-[1.2rem] opacity-60">
+                One of our amazing universes.
+              </p>
+            </div>
+          </a>
 
-          <div class="w-full h-full">
-            <a href="#" class="flex flex-col justify-center w-full h-full">
-              <div class="w-full h-full mb-6">
-                <img
-                  alt=""
-                  src="/img/Magic-Fruits-KeyArt-1024x576.png"
-                  class="w-full h-ful object-left rounded-xl"
-                />
-              </div>
-              <div class="w-auto">
-                <h3 class="text-[2.25rem]">Magic Fruits</h3>
-                <p class="pt-3 text-[1.2rem] opacity-60">
-                  One of our amazing universes.
-                </p>
-              </div>
-            </a>
-          </div>
+          <a href="#" class="flex flex-col justify-center w-full h-full">
+            <div class="w-full h-full mb-6">
+              <img
+                alt=""
+                src="/img/Magic-Fruits-KeyArt-1024x576.png"
+                class="w-full h-ful object-left rounded-xl"
+              />
+            </div>
+            <div class="w-auto">
+              <h3 class="text-[2.25rem]">Magic Fruits</h3>
+              <p class="pt-3 text-[1.2rem] opacity-60">
+                One of our amazing universes.
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
 
     <footer class="bg-[#9C44FC] py-16">
-      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[120rem]">
         <div class="grid grid-cols-3 gap-8">
           <div>
             <h1 class="text-4xl font-black text-white mb-6">Our Services</h1>
