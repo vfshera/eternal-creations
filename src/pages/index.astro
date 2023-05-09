@@ -248,9 +248,7 @@ import Preloader from "../components/Preloader.astro";
     });
 
     // get head component
-    const header = document.querySelector(
-      "header#nav-header"
-    ) as HTMLDivElement;
+    const header = document.querySelector("#nav-header") as HTMLDivElement;
     // navigation wrapper
     const navWrapper = document.querySelector(
       "#navigation-wrapper"
@@ -265,6 +263,8 @@ import Preloader from "../components/Preloader.astro";
       const navOpen = navWrapper.dataset.open === "true";
       //   // add background when scrolled > 300px and navigation is closed
       header.dataset.showBg = `${t.scroll.y > 300 && !navOpen}`;
+
+      console.log(header.dataset);
     });
 
     // scroller.on("scroll", ScrollTrigger.update);
