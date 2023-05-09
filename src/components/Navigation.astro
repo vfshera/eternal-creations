@@ -45,10 +45,10 @@
 <div
   id="navigation-wrapper"
   data-open
-  class="w-screen h-[30vh] bg-[#0c0f16] fixed inset-0 border-b-4 border-solid border-[#9C44FC] z-30"
+  class="w-screen scale-y-0 group data-[open=true]:scale-y-100 origin-[top_center] transition-transform [transition-timing-function:cubic-bezier(0.19,1,0.22,1)] duration-[600ms] h-[30vh] bg-[#0c0f16] fixed inset-0 border-b-4 border-solid border-[#9C44FC] z-30"
 >
   <nav
-    class="flex justify-center items-center w-full h-full transition-opacity opacity-0"
+    class="flex group-data-[open=true]:opacity-100 group-data-[open=false]:opacity-0 justify-center items-center w-full h-full transition-opacity opacity-0"
   >
     <ul class="max-w-[120rem] mx-auto w-full flex flex-col gap-6 text-center">
       <li>
@@ -64,28 +64,13 @@
   </nav>
 </div>
 
-<style>
-  #navigation-wrapper {
-    transform: scaleY(0);
-    transform-origin: center top;
-    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-</style>
-
 <script>
-  const navWrapper = document.querySelector("#navigation-wrapper");
+  const navWrapper = document.querySelector(
+    "#navigation-wrapper"
+  ) as HTMLDivElement;
+
   document.getElementById("navigation__button").onclick = () => {
-    if (navWrapper.dataset.open === "true") {
-      navWrapper.dataset.open = "false";
-
-      navWrapper.style.transform = "scaleY(0)";
-      document.querySelector("#navigation-wrapper > nav").style.opacity = "0";
-    } else {
-      navWrapper.dataset.open = "true";
-
-      navWrapper.style.transform = "scaleY(1)";
-      document.querySelector("#navigation-wrapper > nav").style.opacity = "1";
-    }
+    navWrapper.dataset.open = `${!(navWrapper.dataset.open === "true")}`;
   };
 </script>
 
