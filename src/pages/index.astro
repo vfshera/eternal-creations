@@ -172,32 +172,37 @@ import Preloader from "../components/Preloader.astro";
     </div>
 
     <footer class="bg-[#9C44FC] py-16">
-      <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[120rem]">
-        <div class="grid grid-cols-3 gap-8">
-          <div>
+      <nav
+        role="navigation"
+        class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[120rem]"
+      >
+        <ul class="grid grid-cols-3 gap-8">
+          <li class="flex flex-col">
             <h1 class="text-4xl font-black text-white mb-6">Our Services</h1>
-            <p class="text-xl text-white">
+            <a href="#" class="text-xl text-white">
               Live-Events / Fundraisers / Promotions
-            </p>
-            <p class="text-xl text-white">
+            </a>
+            <a href="#" class="text-xl text-white">
               Game Development / World Creation / Multiplayer Servers
-            </p>
-            <p class="text-xl text-white">3D Animation / 3D Rendering</p>
-          </div>
-          <div>
+            </a>
+            <a href="#" class="text-xl text-white"
+              >3D Animation / 3D Rendering</a
+            >
+          </li>
+          <li class="flex flex-col">
             <h1 class="text-4xl font-black text-white mb-6">Work With Us</h1>
-            <p class="text-xl text-white">eternal@creations.com</p>
-            <p class="text-xl text-white">Thies Boll</p>
-            <p class="text-xl text-white">Director and CEO</p>
-          </div>
-          <div>
+            <a href="#" class="text-xl text-white">eternal@creations.com</a>
+            <a href="#" class="text-xl text-white">Thies Boll</a>
+            <a href="#" class="text-xl text-white">Director and CEO</a>
+          </li>
+          <li class="flex flex-col">
             <h1 class="text-4xl font-black text-white mb-6">Legal</h1>
-            <p class="text-xl text-white">Imprint</p>
-            <p class="text-xl text-white">Privacy Policy</p>
-            <p class="text-xl text-white">Terms of Service</p>
-          </div>
-        </div>
-      </div>
+            <a href="#" class="text-xl text-white">Imprint</a>
+            <a href="#" class="text-xl text-white">Privacy Policy</a>
+            <a href="#" class="text-xl text-white">Terms of Service</a>
+          </li>
+        </ul>
+      </nav>
     </footer>
   </div>
 </Layout>
