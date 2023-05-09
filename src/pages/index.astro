@@ -232,11 +232,23 @@ import Preloader from "../components/Preloader.astro";
       getDirection: true,
     });
 
-    scroller.on("scroll", function (t) {
+    // get head component
+    const header = document.querySelector("header#nav-header");
+
+    scroller.on("scroll", (t) => {
       document.documentElement.setAttribute("data-direction", t.direction);
+
+      ScrollTrigger.update();
+
+      if (t.scroll.y > 300) {
+        // add background when scrolled > 300px
+        header.dataset.showBg = "true";
+      } else {
+        header.dataset.showBg = "false";
+      }
     });
 
-    scroller.on("scroll", ScrollTrigger.update);
+    // scroller.on("scroll", ScrollTrigger.update);
 
     ScrollTrigger.scrollerProxy(pageContainer, {
       scrollTop(value) {
