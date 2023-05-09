@@ -307,19 +307,22 @@ import Preloader from "../components/Preloader.astro";
       let pinWrapperWidth = pinWrapper.offsetWidth;
       let horizontalScrollLength = pinWrapperWidth - window.innerWidth;
 
-      gsap.to(pinWrapper, {
-        scrollTrigger: {
-          scroller: pageContainer,
-          scrub: true,
-          trigger: horizontalSection,
-          pin: true,
-          start: "top top",
-          end: () => `+=${pinWrapperWidth}`,
-          invalidateOnRefresh: true,
-        },
-        x: -horizontalScrollLength,
-        ease: "none",
-      });
+      if (window.innerWidth >= 768) {
+        // to scroll horizontal on tablets and above
+        gsap.to(pinWrapper, {
+          scrollTrigger: {
+            scroller: pageContainer,
+            scrub: true,
+            trigger: horizontalSection,
+            pin: true,
+            start: "top top",
+            end: () => `+=${pinWrapperWidth}`,
+            invalidateOnRefresh: true,
+          },
+          x: -horizontalScrollLength,
+          ease: "none",
+        });
+      }
     });
 
     ScrollTrigger.addEventListener("refresh", () => scroller.update());
