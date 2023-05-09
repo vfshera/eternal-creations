@@ -237,7 +237,9 @@ import Preloader from "../components/Preloader.astro";
   gsap.registerPlugin(ScrollTrigger);
 
   window.addEventListener("load", function () {
-    const pageContainer = document.querySelector("[data-scroll-container]");
+    const pageContainer = document.querySelector(
+      "[data-scroll-container]"
+    ) as HTMLElement;
 
     const scroller = new LocomotiveScroll({
       el: pageContainer,
@@ -246,9 +248,13 @@ import Preloader from "../components/Preloader.astro";
     });
 
     // get head component
-    const header = document.querySelector("header#nav-header");
+    const header = document.querySelector(
+      "header#nav-header"
+    ) as HTMLDivElement;
     // navigation wrapper
-    const navWrapper = document.querySelector("#navigation-wrapper");
+    const navWrapper = document.querySelector(
+      "#navigation-wrapper"
+    ) as HTMLDivElement;
 
     scroller.on("scroll", (t) => {
       document.documentElement.setAttribute("data-direction", t.direction);
@@ -257,13 +263,8 @@ import Preloader from "../components/Preloader.astro";
 
       // check if the navigation is open
       const navOpen = navWrapper.dataset.open === "true";
-
-      if (t.scroll.y > 300 && !navOpen) {
-        // add background when scrolled > 300px and navigation is closed
-        header.dataset.showBg = "true";
-      } else {
-        header.dataset.showBg = "false";
-      }
+      //   // add background when scrolled > 300px and navigation is closed
+      header.dataset.showBg = `${t.scroll.y > 300 && !navOpen}`;
     });
 
     // scroller.on("scroll", ScrollTrigger.update);
