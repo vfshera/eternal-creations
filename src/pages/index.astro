@@ -9,13 +9,13 @@ import Preloader from "../components/Preloader.astro";
   <Preloader />
   <div data-scroll-container class="overflow-hidden isolate">
     {/* HERO */}
-    <div class="relative h-[110vh] overflow-hidden">
+    <div class="relative h-screen lg:h-[110vh] overflow-hidden">
       <div
         data-scroll
         data-scroll-speed="-2"
-        class="absolute inset-x-0 bottom-0 py-24 lg:py-48 flex items-center text-center flex-col gap-8 mx-auto z-30 h-fit w-full"
+        class="absolute inset-0 lg:top-[auto] justify-center lg:justify-start lg:bottom-0 py-24 lg:py-48 flex items-center text-center flex-col gap-8 mx-auto z-30 lg:h-fit w-full"
       >
-        <h1 class="text-5xl lg:text-9xl font-black uppercase">
+        <h1 class="text-4xl md:text-5xl lg:text-9xl font-black uppercase">
           <span class="block opacity-80">Creations</span>
           <span>for</span>
           <span>eternity</span>
@@ -25,11 +25,11 @@ import Preloader from "../components/Preloader.astro";
         </p>
       </div>
       <div
-        class="absolute inset-x-0 inset-y-0 w-full h-full bg-gradient-to-b from-[rgba(166,81,255,0.5)] to-[#9E42FF] z-20"
+        class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(166,81,255,0.5)] to-[#9E42FF] z-20"
       >
       </div>
       <div
-        class="absolute inset-x-0 inset-y-0 w-full h-full bg-gradient-to-b from-[rgba(0,81,0,0)] to-[#000] z-10"
+        class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(0,81,0,0)] to-[#000] z-10"
       >
       </div>
       <div class="relative h-full w-full z-0">
@@ -47,26 +47,28 @@ import Preloader from "../components/Preloader.astro";
     {/* SECTION 2 */}
     <div class="relative z-30">
       <div
-        class="px-4 pt-16 pb-8 lg:px-8 lg:pt-32 lg:pb-20 max-w-[120rem] mx-auto flex flex-col gap-14"
+        class="px-5 pb-8 lg:px-8 pt-16 sm:pt-28 lg:pt-32 lg:pb-20 max-w-[120rem] mx-auto flex flex-col gap-10 sm:gap-14"
       >
-        <h1 class="text-4xl lg:text-6xl font-black uppercase">
+        <h1
+          class="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-black uppercase"
+        >
           <span class="">We are</span>
           <span class="text-[#9C44FC]">Eternal Creations</span>
         </h1>
-        <div class="flex">
-          <div class="w-1/2 pb-10">
+        <div class="flex flex-col gap-5 sm:flex-row">
+          <div class="w-full sm:w-1/2 pb-10">
             <div
-              class="h-full rounded-xl w-full bg-slate-50/10 text-xl text-[#9C44FC]/60 grid place-content-center"
+              class="h-[250px] sm:h-full rounded-xl w-full bg-slate-50/10 text-xl text-[#9C44FC]/60 grid place-content-center"
             >
               image placeholder
             </div>
           </div>
 
           <div
-            class="flex flex-col justify-end mx-4 gap-6 lg:gap-14 pb-14 lg:mx-32 w-1/2"
+            class="flex flex-col justify-end sm:mx-4 gap-8 sm:gap-6 lg:gap-14 pb-5 lg:mx-32 w-full sm:w-1/2"
           >
             <div class="flex items-start max-w-[80rem]">
-              <p class="text-lg lg:text-4xl lg:leading-[1.55]">
+              <p class="text-2xl leading-9 lg:text-4xl lg:leading-[1.55]">
                 A young team consisting of creative minds that are really
                 passionate about Minecraft. It's our expression of art, we love
                 to create stuff and bring joy to children.
@@ -88,17 +90,23 @@ import Preloader from "../components/Preloader.astro";
     </div>
 
     <div
-      class="horizontal-scroll overflow-hidden left-0 max-w-[120rem] pt-24 mx-auto"
+      class="horizontal-scroll overflow-hidden left-0 max-w-[120rem] pt-5 sm:pt-24 mx-auto"
     >
-      <div class="flex items-center mb-16 pb-[200px] pl-8">
-        <div class="pin-wrapper pt-8 grid grid-cols-[repeat(5,700px)] gap-10">
+      <div
+        class="flex items-center mb-16 sm:pb-20 lg:pb-[200px] px-5 sm:pl-5 lg:pl-8"
+      >
+        <div
+          class="pin-wrapper pt-8 grid grid-cols-1 sm:grid-cols-[repeat(5,550px)] lg:grid-cols-[repeat(5,700px)] gap-10"
+        >
           <div class="flex flex-col">
-            <h1 class="text-7xl font-black uppercase">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black uppercase">
               <span class="block">Some Of</span>
               <span class="block mt-2 text-[#9C44FC]">Our Work</span>
             </h1>
             <div class="text-left">
-              <p class="text-[2.5rem] my-16 max-w-[80rem]">
+              <p
+                class="text-2xl lg:text-[2.5rem] lg:leading-tight mt-8 mb-10 lg:my-16 max-w-[95%] lg:max-w-[80rem]"
+              >
                 <span class="block">We build amazing worlds. Every day.</span>
                 <span class="block"
                   >Here is a selection of our personal favorites.</span
@@ -109,7 +117,7 @@ import Preloader from "../components/Preloader.astro";
                 class="block my-6 w-fit btn large group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-4 px-8 hover:border-[#9C44FC]"
                 style="transition: border .3s ease .05s;"
               >
-                <span class="relative text-[1.85rem] z-10"
+                <span class="relative text-xl sm:text-[1.85rem] z-10"
                   >Explore All Our Worlds</span
                 >
               </a>
@@ -120,7 +128,7 @@ import Preloader from "../components/Preloader.astro";
             class="flex flex-col justify-center w-full h-full hoverable"
             aria-label="View"
           >
-            <div class="w-full h-full mb-6">
+            <div class="w-full h-full mb-3 sm:mb-6">
               <img
                 alt=""
                 src="/img/EW_keyArt-1024x576.webp"
@@ -128,15 +136,15 @@ import Preloader from "../components/Preloader.astro";
               />
             </div>
             <div class="w-auto">
-              <h3 class="text-[2.25rem]">Extreme Weapons</h3>
-              <p class="pt-3 text-[1.2rem] opacity-60">
+              <h3 class="text-2xl sm:text-[2.25rem]">Extreme Weapons</h3>
+              <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
                 One of our amazing universes.
               </p>
             </div>
           </a>
 
           <a href="#" class="flex flex-col justify-center w-full h-full">
-            <div class="w-full h-full mb-6">
+            <div class="w-full h-full mb-3 sm:mb-6">
               <img
                 alt=""
                 src="/img/Hacker-Weapons-1024x576.webp"
@@ -144,15 +152,15 @@ import Preloader from "../components/Preloader.astro";
               />
             </div>
             <div class="w-auto">
-              <h3 class="text-[2.25rem]">Hacker Weapons</h3>
-              <p class="pt-1 text-[1.2rem] opacity-60">
+              <h3 class="text-2xl sm:text-[2.25rem]">Hacker Weapons</h3>
+              <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
                 One of our amazing universes.
               </p>
             </div>
           </a>
 
           <a href="#" class="flex flex-col justify-center w-full h-full">
-            <div class="w-full h-full mb-6">
+            <div class="w-full h-full mb-3 sm:mb-6">
               <img
                 alt=""
                 src="/img/Magic-Fruits-KeyArt-1024x576.webp"
@@ -160,23 +168,25 @@ import Preloader from "../components/Preloader.astro";
               />
             </div>
             <div class="w-auto">
-              <h3 class="text-[2.25rem]">Magic Fruits</h3>
-              <p class="pt-3 text-[1.2rem] opacity-60">
+              <h3 class="text-2xl sm:text-[2.25rem]">Magic Fruits</h3>
+              <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
                 One of our amazing universes.
               </p>
             </div>
           </a>
 
-          <div class="flex h-full w-full">
+          <div class="flex items-center sm:items-start h-full w-full">
             <div
-              class="w-full max-h-[390px] mb-6 flex justify-center items-center"
+              class="w-full h-[auto] sm:h-[390px] mb-0 sm:mb-6 flex justify-start sm:justify-center items-center"
             >
               <a
                 href="/projects"
                 class="block w-fit btn large group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-4 px-8 hover:border-[#9C44FC]"
                 style="transition: border .3s ease .05s;"
               >
-                <span class="relative text-[1.85rem] z-10">View all</span>
+                <span class="relative text-xl sm:text-[1.85rem] z-10"
+                  >View all</span
+                >
               </a>
             </div>
           </div>
@@ -189,9 +199,11 @@ import Preloader from "../components/Preloader.astro";
         role="navigation"
         class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[120rem]"
       >
-        <ul class="grid grid-cols-3 gap-8">
+        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
           <li class="flex flex-col">
-            <p class="text-4xl font-black text-white mb-6">Our Services</p>
+            <p class="text-4xl font-black text-white mb-3 sm:mb-6">
+              Our Services
+            </p>
             <a href="#" class="text-xl text-white">
               Live-Events / Fundraisers / Promotions
             </a>
@@ -203,13 +215,15 @@ import Preloader from "../components/Preloader.astro";
             >
           </li>
           <li class="flex flex-col">
-            <p class="text-4xl font-black text-white mb-6">Work With Us</p>
+            <p class="text-4xl font-black text-white mb-3 sm:mb-6">
+              Work With Us
+            </p>
             <a href="#" class="text-xl text-white">eternal@creations.com</a>
             <a href="#" class="text-xl text-white">Thies Boll</a>
             <a href="#" class="text-xl text-white">Director and CEO</a>
           </li>
           <li class="flex flex-col">
-            <p class="text-4xl font-black text-white mb-6">Legal</p>
+            <p class="text-4xl font-black text-white mb-3 sm:mb-6">Legal</p>
             <a href="#" class="text-xl text-white">Imprint</a>
             <a href="#" class="text-xl text-white">Privacy Policy</a>
             <a href="#" class="text-xl text-white">Terms of Service</a>
