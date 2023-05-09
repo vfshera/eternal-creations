@@ -1,7 +1,7 @@
 <div
   id="nav-header"
   data-show-bg
-  class="fixed top-0 inset-x-0 w-full h-auto p-8 z-50 transition-[background-color] duration-300 data-[show-bg='true']:bg-[#0c0f16]"
+  class="fixed top-0 inset-x-0 w-full h-auto py-2 px-6 sm:px-8 lg:py-8 z-50 transition-[background-color] duration-300 data-[show-bg='true']:bg-[#0c0f16]"
 >
   <div
     class="absolute inset-x-0 inset-y-0 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0)] z-10"
@@ -14,27 +14,16 @@
       </a>
       <button
         id="navigation__button"
-        class="btn group relative text-accent bg-white w-16 h-16 rounded-full flex justify-center items-center overflow-hidden"
+        class="btn group relative text-accent bg-white aspect-square h-12 lg:h-16 rounded-full flex justify-center items-center overflow-hidden"
       >
         <span
-          class="relative text-xl font-semibold z-10 group-hover:text-white"
+          class="relative text-xl font-semibold z-10 group-hover:text-white flex flex-col gap-1.5"
         >
           <span
-            class="bg-accent group-hover:bg-white"
-            style="width: 26px;
-                    height: 2px;
-                    display: block;
-                    border-radius: 2px;
-                    transition: all 0.2s ease-out;"
+            class="bg-accent group-hover:bg-white h-0.5 w-[26px] block border-2 transition-all duration-200 ease-in-out"
           ></span>
           <span
-            class="bg-accent group-hover:bg-white"
-            style="width: 26px;
-                    height: 2px;
-                    display: block;
-                    margin: 6px auto 0;
-                    border-radius: 2px;
-                    transition: all 0.2s ease-out;"
+            class="bg-accent group-hover:bg-white h-0.5 w-[26px] block border-2 transition-all duration-200 ease-in-out"
           ></span>
         </span>
       </button>
