@@ -3,10 +3,6 @@
   data-show-bg
   class="fixed top-0 inset-x-0 w-full h-auto py-2 px-6 sm:px-8 lg:py-8 z-50 transition-[background-color] duration-300 data-[show-bg='true']:bg-[#0c0f16]"
 >
-  <div
-    class="absolute inset-x-0 inset-y-0 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0)] z-10"
-  >
-  </div>
   <div class="relative max-w-[120rem] mx-auto z-20">
     <div class="flex justify-between items-center">
       <a href="/" class="hoverable" aria-label="Home">
@@ -34,14 +30,14 @@
 <div
   id="navigation-wrapper"
   data-open
-  class="w-screen scale-y-0 group data-[open=true]:scale-y-100 origin-[top_center] transition-transform [transition-timing-function:cubic-bezier(0.19,1,0.22,1)] duration-[600ms] h-[30vh] bg-[#0c0f16] fixed inset-0 border-b-4 border-solid border-[#9C44FC] z-30"
+  class="w-screen scale-y-0 group data-[open=true]:scale-y-100 origin-[top_center] transition-transform [transition-timing-function:cubic-bezier(0.19,1,0.22,1)] duration-[600ms] h-[20vh] lg:h-[30vh] bg-[#0c0f16] fixed inset-0 border-b-4 border-solid border-[#9C44FC] z-30"
 >
   <nav
     class="flex group-data-[open=true]:opacity-100 group-data-[open=false]:opacity-0 justify-center items-center w-full h-full transition-opacity opacity-0"
   >
-      <ul
-        class="max-w-[120rem] mx-auto w-full flex justify-center gap-6 text-center"
-      >
+    <ul
+      class="max-w-[120rem] mx-auto w-full flex justify-center -mb-10 gap-6 text-center"
+    >
       <li>
         <a href="#" class="text-2xl sm:text-4xl uppercase font-black">Home</a>
       </li>
@@ -64,11 +60,20 @@
 
   const header = document.querySelector("#nav-header") as HTMLDivElement;
 
+  const HEADER_TOGGLE_CLASS = "!pb-0";
+
   document.getElementById("navigation__button").onclick = () => {
     //check is bg is shown
     const headerHasBg = header.dataset.showBg === "true";
 
     navWrapper.dataset.open = `${!(navWrapper.dataset.open === "true")}`;
+
+    // helps links to be clickable
+    if (navWrapper.dataset.open === "true") {
+      header.classList.add(HEADER_TOGGLE_CLASS);
+    } else {
+      header.classList.remove(HEADER_TOGGLE_CLASS);
+    }
 
     if (navWrapper.dataset.open === "true" && headerHasBg) {
       // remove header bg if navigation is opened
