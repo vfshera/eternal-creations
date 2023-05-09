@@ -1,4 +1,8 @@
-<div class="fixed top-0 inset-x-0 w-full h-auto p-8 z-50">
+<header
+  id="nav-header"
+  data-show-bg
+  class="fixed top-0 inset-x-0 w-full h-auto p-8 z-50 transition-[background-color] data-[show-bg='true']:bg-[#0c0f16]"
+>
   <div
     class="absolute inset-x-0 inset-y-0 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0)] z-10"
   >
@@ -8,7 +12,7 @@
       <a href="/" class="hoverable" aria-label="Home">
         <img class="w-32 h-auto" alt="" src="/img/logo_white.png" />
       </a>
-      <a
+      <button
         id="navigation__button"
         class="btn group relative text-accent bg-white w-16 h-16 rounded-full flex justify-center items-center overflow-hidden"
       >
@@ -33,13 +37,14 @@
                     transition: all 0.2s ease-out;"
           ></span>
         </span>
-      </a>
+      </button>
     </div>
   </div>
-</div>
+</header>
 
 <div
-  id="navigation"
+  id="navigation-wrapper"
+  data-open
   class="w-screen h-[30vh] bg-[#0c0f16] fixed inset-0 border-b-4 border-solid border-[#9C44FC] z-30"
 >
   <nav
@@ -60,7 +65,7 @@
 </div>
 
 <style>
-  #navigation {
+  #navigation-wrapper {
     transform: scaleY(0);
     transform-origin: center top;
     transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -68,13 +73,18 @@
 </style>
 
 <script>
-  document.getElementById("navigation__button").onclick = function () {
-    if (document.querySelector("#navigation > nav").style.opacity == "1") {
-      document.getElementById("navigation").style.transform = "scaleY(0)";
-      document.querySelector("#navigation > nav").style.opacity = "0";
+  const navWrapper = document.querySelector("#navigation-wrapper");
+  document.getElementById("navigation__button").onclick = () => {
+    if (navWrapper.dataset.open === "true") {
+      navWrapper.dataset.open = "false";
+
+      navWrapper.style.transform = "scaleY(0)";
+      document.querySelector("#navigation-wrapper > nav").style.opacity = "0";
     } else {
-      document.getElementById("navigation").style.transform = "scaleY(1)";
-      document.querySelector("#navigation > nav").style.opacity = "1";
+      navWrapper.dataset.open = "true";
+
+      navWrapper.style.transform = "scaleY(1)";
+      document.querySelector("#navigation-wrapper > nav").style.opacity = "1";
     }
   };
 </script>
