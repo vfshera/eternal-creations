@@ -21,11 +21,11 @@ module.exports = {
 
       keyframes: {
         work: {
-          "0%": {
-            transform: "translate3d(-7.5em,0,0)",
+          from: {
+            transform: "translateX(0)",
           },
           to: {
-            transform: "translate3d(-12.5725em,0,0) ",
+            transform: "translateX(calc(-100% - 2rem))",
           },
         },
       },
