@@ -1,8 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navigation from "../components/Navigation.astro";
-import LocomotiveScroll from "locomotive-scroll";
-import ScrollingText from "../components/ScrollingText.astro";
+import Navigation from "../../components/Navigation.astro";
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
@@ -11,7 +9,7 @@ import ScrollingText from "../components/ScrollingText.astro";
     <div
       data-scroll
       data-scroll-speed="2"
-      class="mx-auto mb-16 pb-[200px] pl-[5rem] max-w-[120rem]"
+      class="mx-auto mb-16 pb-[200px] px-4 sm:px-6 lg:px-8 max-w-[120rem]"
     >
       <div class="pt-[100px] pb-[200px]">
         <h1 class="text-8xl font-black uppercase">
@@ -22,7 +20,10 @@ import ScrollingText from "../components/ScrollingText.astro";
 
       <div>
         <div class="border-b border-gray-500 border-solid py-8">
-          <a href="#" class="flex justify-evenly items-center">
+          <a
+            href="/jobs/creative-director"
+            class="flex justify-evenly items-center"
+          >
             <h2 class="text-6xl">Creative Director</h2>
             <p class="text-xl">
               Looking for a dream job in the gaming industry? Minecraft
@@ -34,7 +35,7 @@ import ScrollingText from "../components/ScrollingText.astro";
         </div>
 
         <div class="border-b border-gray-500 border-solid py-16">
-          <a href="#" class="flex justify-evenly items-center">
+          <a href="/jobs/director" class="flex justify-evenly items-center">
             <h2 class="text-6xl">Director</h2>
             <p class="text-xl">
               As a part of our team, you'll have the opportunity to work with a
@@ -47,7 +48,10 @@ import ScrollingText from "../components/ScrollingText.astro";
         </div>
 
         <div class="border-b border-gray-500 border-solid py-16">
-          <a href="#" class="flex justify-evenly items-center">
+          <a
+            href="/jobs/creative-director"
+            class="flex justify-evenly items-center"
+          >
             <h2 class="text-6xl">Creative Director</h2>
             <p class="text-xl">
               If you're a talented individual with a love for Minecraft and a
