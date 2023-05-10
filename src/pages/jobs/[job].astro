@@ -1,0 +1,138 @@
+---
+import Navigation from "../../components/Navigation.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const { job: jobSlug } = Astro.params;
+
+const jobs = [
+  {
+    slug: "creative-director",
+    title: "Creative Director",
+  },
+  {
+    slug: "director",
+    title: "Director",
+  },
+];
+
+const job = jobs.find((j) => j.slug == jobSlug);
+---
+
+<Layout>
+  <Navigation />
+  <div data-scroll-section>
+    <div
+      data-scroll
+      data-scroll-speed="2"
+      class="mb-16 pb-[200px] px-4 sm:px-6 lg:px-8 max-w-[120rem]"
+    >
+      <div class="relative isolate pt-12 lg:pt-32 flex justify-center">
+        <div class="relative z-0">
+          <div
+            class="absolute bottom-0 h-full left-0 w-full z-[1] bg-gradient-to-b from-transparent via-[#0c0f16]/90 to-[#0c0f16]"
+          >
+          </div>
+          <img
+            class="object-cover h-[500px] md:object-contain md:h-[600px] relative z-0"
+            src="/img/Magic-Fruits-KeyArt-1024x576.webp"
+            alt=""
+          />
+        </div>
+        <div
+          class="absolute bottom-0 pb-5 -mt-5 z-[5] text-center flex items-center flex-col gap-3"
+        >
+          <h3 class="text-5xl font-black">{job.title}</h3>
+
+          <p class="text-2xl">
+            Stream music and play <br /> games together with friends
+          </p>
+
+          <button
+            class="py-3 hover:scale-105 transition-all mt-2 text-[#0c0f16] text-xl font-semibold w-max px-10 rounded-full bg-white"
+            >Start Now</button
+          >
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-3 md:px-10 pt-10 flex flex-col gap-10">
+        <p class="text-base md:text-2xl text-center md:text-left">
+          There’s a new way to enjoy Discord with your friends: Bertram lets you
+          play music and games, or watch YouTube videos together in real time.
+          Bertram is the perfect way to liven up your Discord server and keep
+          everyone entertained.
+        </p>
+        <p class="text-base md:text-2xl text-center md:text-left">
+          If you want to watch a YouTube video together with your friends,
+          simply use the /together command followed by the YouTube option.
+          Bertram will create a virtual room that can be joined through a link
+          inside Discord. Queue up videos and everyone in the channel will be
+          able to watch it in sync. The host of the room can control the
+          playback.
+        </p>
+        <p class="text-base md:text-2xl text-center md:text-left">
+          Finally, if you’re looking for something to do in between matches or
+          during downtime, Bertram also offers a variety of games that you can
+          play with your friends. Use the /together command to see a list of all
+          available games, then follow up with one of the listed games to start
+          playing. Currently, there are 8 games available: Chess, SpellCast,
+          Doodle Crew, Words Snack, Letter Tile, Fishington, Betrayal and Poker.
+          More games will be added in the future!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer data-scroll-section class="bg-gray-900 py-16 mt-auto">
+    <div data-scroll class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="text-left">
+          <h3 class="text-2xl font-thin">Our Services</h3>
+          <p class="text-xl">Live-Events / Fundraisers / Promotions</p>
+          <p class="text-xl">
+            Game Development / World Creation / Multiplayer Servers
+          </p>
+          <p class="text-xl">3D Animation / 3D Rendering</p>
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-thin">Work with us</h3>
+          <p class="text-xl">eternal@creations.com</p>
+          <p class="text-xl">Thies Boll</p>
+          <p class="text-xl">Director and CEO</p>
+        </div>
+        <div class="text-right">
+          <h3 class="text-2xl font-thin">Legal</h3>
+          <p class="text-xl">Imprint</p>
+          <p class="text-xl">Privacy Policy</p>
+          <p class="text-xl">Terms of Service</p>
+        </div>
+      </div>
+      <form
+        action="#"
+        method="POST"
+        class="grid grid-cols-1 gap-6 sm:grid-cols-2"
+      >
+        <!-- Form fields go here -->
+      </form>
+    </div>
+  </footer>
+</Layout>
+
+<script>
+  import LocomotiveScroll from "locomotive-scroll";
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector("[data-scroll-container]");
+
+    if (container) {
+      const scroll = new LocomotiveScroll({
+        el: container,
+        smooth: true, // Enable smooth scrolling
+      });
+
+      // Update Locomotive Scroll on page resize
+      window.addEventListener("resize", () => {
+        scroll.update();
+      });
+    }
+  });
+</script>
