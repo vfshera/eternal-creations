@@ -272,19 +272,73 @@ const jobs = [
 
 <script>
   import LocomotiveScroll from "locomotive-scroll";
+  import { gsap, Power1 } from "gsap";
+
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
 
   window.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector("[data-scroll-container]");
 
     if (container) {
-      const scroll = new LocomotiveScroll({
+      const scroller = new LocomotiveScroll({
         el: container,
         smooth: true, // Enable smooth scrolling
       });
 
+      scroller.on("scroll", (t) => {
+        document.documentElement.setAttribute("data-direction", t.direction);
+
+        ScrollTrigger.update();
+      });
+
+      ScrollTrigger.scrollerProxy(container, {
+        scrollTop(value) {
+          return arguments.length
+            ? scroller.scrollTo(value, 0, 0)
+            : scroller.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+          return {
+            left: 0,
+            top: 0,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          };
+        },
+        pinType: container.style.transform ? "transform" : "fixed",
+      });
+
+      const tl = gsap.timeline();
+      const el = document.querySelector(".zoom-out");
+
+      tl.fromTo(
+        el,
+        {
+          scrollTrigger: {
+            trigger: el,
+            start: "-300px center",
+            end: "bottom center",
+            markers: true,
+            scrub: true,
+            onEnter: () => {
+              console.log("enter trigger");
+            },
+            onLeave: () => {
+              console.log("leave trigger");
+            },
+          },
+          duration: 2,
+          scale: 2,
+          ease: Power1.easeIn,
+        },
+        { scale: 1 }
+      );
+
       // Update Locomotive Scroll on page resize
       window.addEventListener("resize", () => {
-        scroll.update();
+        scroller.update();
       });
     }
   });
