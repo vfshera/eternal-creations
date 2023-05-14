@@ -18,126 +18,214 @@ const jobs = [
 
 <Layout>
   <Navigation />
-  <div data-scroll-section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div
-      data-scroll
-      data-scroll-speed="2"
-      class="intro min-h-[80vh] flex flex-col justify-center"
-    >
-      <h1
-        class="max-w-[25ch] text-4xl sm:text-5xl lg:text-7xl font-black uppercase"
+  <div data-scroll-container>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        data-scroll
+        data-scroll-speed="2"
+        class="intro min-h-[80vh] flex flex-col justify-center"
       >
-        <span class="block">Some Of</span>
-        <span class="block mt-2 text-[#9C44FC]">Our Work</span>
-      </h1>
-    </div>
-
-    <div data-scroll data-scroll-speed="2" class="pt-8 mt-28">
-      <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
-        <div class="">
-          <p
-            class="py-2 uppercase px-6 border w-max border-[#303436] text-xs rounded-[10rem]"
-          >
-            ABOUT THE GAME
-          </p>
-        </div>
-        <div class="content">
-          <h2 class="mb-8 opacity-60 font-semibold text-xs">
-            Made in collabaration with<br />
-            <a href="#" class="text-[#9C44FC] font-semibold" target="_blank"
-              >Iamprogrez</a
-            > &amp; <a
-              href="#"
-              class="text-[#9C44FC] font-semibold"
-              target="_blank">IT Randsteden</a
-            >
-          </h2>
-          <h2 class="text-4xl leading-none font-semibold">
-            Interact with villagers <br />and save Seasight.
-          </h2>
-          <p class="my-4 leading-[1.4rem] text-base">
-            In collaboration with <a href="#" class="text-[#9C44FC]"
-              >IT Randsteden</a
-            > and <a href="#" class="text-[#9C44FC]">IamProgrez</a>, we created
-            an interactive world educators can use to teach pupils about the
-            things we can do to protect humanity from the rising sea level.
-            Children experience this by working together, making decisions about
-            the different options, each with their own advantages and
-            disadvantages.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div data-scroll class="mt-28">
-      <div class="image-container">
-        <div
-          class="h-[120px] md:h-[215px] lg:h-[400px] rounded-xl aspect-video mx-auto bg-slate-50/10 text-xl text-[#9C44FC]/60 grid place-content-center"
+        <h1
+          class="max-w-[25ch] text-4xl sm:text-5xl lg:text-7xl font-black uppercase"
         >
-          image placeholder
-        </div>
+          <span class="block">Some Of</span>
+          <span class="block mt-2 text-[#9C44FC]">Our Work</span>
+        </h1>
       </div>
-    </div>
 
-    <div data-scroll data-scroll-speed="2" class="mt-28">
-      <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
-        <div class="">
-          <p
-            class="py-2 px-6 border w-max border-[#303436] uppercase text-xs rounded-[10rem]"
-          >
-            HOW IT WORKS
-          </p>
-        </div>
-        <div class="content">
-          <h2 class="text-4xl leading-none font-semibold">
-            Children form their own opinion by exploring the environment.
-          </h2>
-          <p class="my-4 leading-[1.4rem] text-base">
-            By talking to the local residents, children get introduced to real
-            life dilemmas about climate change and green energy. Now, they have
-            to work together. Doing nothing will get them wet feet. What will
-            they do to try and save the local village?
-          </p>
+      <div data-scroll data-scroll-speed="2" class="pt-8 mt-28">
+        <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
+          <div class="">
+            <p
+              class="py-2 uppercase px-6 border w-max border-[#303436] text-xs rounded-[10rem]"
+            >
+              ABOUT THE GAME
+            </p>
+          </div>
+          <div class="content">
+            <h2 class="mb-8 opacity-60 font-semibold text-xs">
+              Made in collabaration with<br />
+              <a href="#" class="text-[#9C44FC] font-semibold" target="_blank"
+                >Iamprogrez</a
+              > &amp; <a
+                href="#"
+                class="text-[#9C44FC] font-semibold"
+                target="_blank">IT Randsteden</a
+              >
+            </h2>
+            <h2 class="text-4xl leading-none font-semibold">
+              Interact with villagers <br />and save Seasight.
+            </h2>
+            <p class="my-4 leading-[1.4rem] text-base">
+              In collaboration with <a href="#" class="text-[#9C44FC]"
+                >IT Randsteden</a
+              > and <a href="#" class="text-[#9C44FC]">IamProgrez</a>, we
+              created an interactive world educators can use to teach pupils
+              about the things we can do to protect humanity from the rising sea
+              level. Children experience this by working together, making
+              decisions about the different options, each with their own
+              advantages and disadvantages.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div data-scroll class="mt-28">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div class="grid gap-24 grid-cols-1 content-start">
+
+      <div data-scroll class="mt-28">
+        <div class="image-container">
           <div
-            class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
+            class="h-[120px] md:h-[215px] lg:h-[400px] rounded-xl lg:aspect-video mx-auto bg-slate-50/10 text-xl text-[#9C44FC]/60 grid place-content-center"
           >
-            <img
-                class="rounded-[.2rem] min-h-[205px] md:min-h-[364px] lg:min-h-[auto] lg:h-[324px]"
-              src="/img/EW_keyArt-1024x576.webp"
-              alt=""
-            />
-          </div>
-          <div
-            class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
-          >
-            <img
-                class="rounded-[.2rem] min-h-[205px] md:min-h-[364px] lg:min-h-[auto] lg:h-[324px]"
-              src="/img/Magic-Fruits-KeyArt-1024x576.webp"
-              alt=""
-            />
+            image placeholder
           </div>
         </div>
-        <div class="grid gap-24 grid-cols-1 mt-20 content-start">
+      </div>
+
+      <div data-scroll data-scroll-speed="2" class="mt-28">
+        <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
+          <div class="">
+            <p
+              class="py-2 px-6 border w-max border-[#303436] uppercase text-xs rounded-[10rem]"
+            >
+              HOW IT WORKS
+            </p>
+          </div>
+          <div class="content">
+            <h2 class="text-4xl leading-none font-semibold">
+              Children form their own opinion by exploring the environment.
+            </h2>
+            <p class="my-4 leading-[1.4rem] text-base">
+              By talking to the local residents, children get introduced to real
+              life dilemmas about climate change and green energy. Now, they
+              have to work together. Doing nothing will get them wet feet. What
+              will they do to try and save the local village?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div data-scroll class="mt-28">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div class="grid gap-24 grid-cols-1 content-start">
+            <div
+              class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
+            >
+              <img
+                class="rounded-[.2rem] min-h-[205px] md:min-h-[364px] lg:min-h-[auto] lg:h-[324px]"
+                src="/img/EW_keyArt-1024x576.webp"
+                alt=""
+              />
+            </div>
+            <div
+              class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
+            >
+              <img
+                class="rounded-[.2rem] min-h-[205px] md:min-h-[364px] lg:min-h-[auto] lg:h-[324px]"
+                src="/img/Magic-Fruits-KeyArt-1024x576.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-24 grid-cols-1 mt-20 content-start">
+            <div
+              class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
+            >
+              <img
+                class="rounded-[.2rem] min-h-[205px] md:min-h-[364px] lg:min-h-[auto] lg:h-[324px]"
+                src="/img/minecraft.webp"
+                alt=""
+              />
+            </div>
+            <div
+              class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
+            >
+              <img
+                class="rounded-[.2rem] min-h-[205px] md:min-h-[364px] lg:min-h-[auto] lg:h-[324px]"
+                src="/img/Hacker-Weapons-1024x576.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-scroll data-scroll-speed="2" class="mt-28 pt-8">
+        <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
+          <div class="">
+            <p
+              class="py-2 px-6 border w-max border-[#303436] uppercase text-xs rounded-[10rem]"
+            >
+              RESULTS
+            </p>
+          </div>
+          <div class="content">
+            <h2 class="text-4xl leading-none font-semibold">
+              Players experience the effect of their choices immediately.
+            </h2>
+            <p class="my-4 leading-[1.4rem] text-base">
+              Players can invest in different resources to build the wanted
+              necessities. Some are more durable and work for the long term, but
+              do require more resources and time to produce. Other (cheaper)
+              strategies are to invest in short term solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-scroll class="mt-28">
+        <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
+          <div class=""></div>
+          <div class="content">
+            <h2 class="text-4xl leading-none font-semibold">
+              Information based decisionmaking.
+            </h2>
+            <p class="mt-4 leading-[1.4rem] text-base">
+              Players can invest in different resources to build the wanted
+              necessities. Some are more durable and work for the long term, but
+              do require more resources and time to produce. Other (cheaper)
+              strategies are to invest in short term solutions.Based on the
+              information they found and their own interpretations, players have
+              to make a plan of action in order to work together in an effective
+              way to protect themselves from the rising sea level.
+            </p>
+            <h2 class="mt-8 opacity-60 font-semibold text-xs">
+              Made in collabaration with<br />
+              <a href="#" class="text-[#9C44FC] font-semibold" target="_blank"
+                >Iamprogrez</a
+              > &amp; <a
+                href="#"
+                class="text-[#9C44FC] font-semibold"
+                target="_blank">IT Randsteden</a
+              >
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div data-scroll class="my-28">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="md:col-span-2">
+            <div
+              class="image-container mx-auto scale-100 w-max zoom-out image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
+            >
+              <img
+                class="rounded-[.2rem] min-h-[205px] md:min-h-[226px] lg:min-h-[auto] lg:h-[324px]"
+                src="/img/Magic-Fruits-KeyArt-1024x576.webp"
+                alt=""
+              />
+            </div>
+          </div>
           <div
-            class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
+            class="image-container rise-up image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
           >
             <img
-                class="rounded-[.2rem] min-h-[205px] md:min-h-[364px] lg:min-h-[auto] lg:h-[324px]"
+              class="rounded-[.2rem] min-h-[205px] md:min-h-[167px] lg:min-h-[auto] lg:h-[324px]"
               src="/img/minecraft.webp"
               alt=""
             />
           </div>
           <div
-            class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
+            class="image-container rise-up image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
           >
             <img
-                class="rounded-[.2rem] min-h-[205px] md:min-h-[364px] lg:min-h-[auto] lg:h-[324px]"
+              class="rounded-[.2rem] min-h-[205px] md:min-h-[167px] lg:min-h-[auto] lg:h-[324px]"
               src="/img/Hacker-Weapons-1024x576.webp"
               alt=""
             />
@@ -146,94 +234,8 @@ const jobs = [
       </div>
     </div>
 
-    <div data-scroll data-scroll-speed="2" class="mt-28 pt-8">
-      <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
-        <div class="">
-          <p
-            class="py-2 px-6 border w-max border-[#303436] uppercase text-xs rounded-[10rem]"
-          >
-            RESULTS
-          </p>
-        </div>
-        <div class="content">
-          <h2 class="text-4xl leading-none font-semibold">
-            Players experience the effect of their choices immediately.
-          </h2>
-          <p class="my-4 leading-[1.4rem] text-base">
-            Players can invest in different resources to build the wanted
-            necessities. Some are more durable and work for the long term, but
-            do require more resources and time to produce. Other (cheaper)
-            strategies are to invest in short term solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div data-scroll class="mt-28">
-      <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
-        <div class=""></div>
-        <div class="content">
-          <h2 class="text-4xl leading-none font-semibold">
-            Information based decisionmaking.
-          </h2>
-          <p class="mt-4 leading-[1.4rem] text-base">
-            Players can invest in different resources to build the wanted
-            necessities. Some are more durable and work for the long term, but
-            do require more resources and time to produce. Other (cheaper)
-            strategies are to invest in short term solutions.Based on the
-            information they found and their own interpretations, players have
-            to make a plan of action in order to work together in an effective
-            way to protect themselves from the rising sea level.
-          </p>
-          <h2 class="mt-8 opacity-60 font-semibold text-xs">
-            Made in collabaration with<br />
-            <a href="#" class="text-[#9C44FC] font-semibold" target="_blank"
-              >Iamprogrez</a
-            > &amp; <a
-              href="#"
-              class="text-[#9C44FC] font-semibold"
-              target="_blank">IT Randsteden</a
-            >
-          </h2>
-        </div>
-      </div>
-    </div>
-    <div data-scroll class="my-28">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="md:col-span-2">
-        <div
-              class="image-container mx-auto scale-100 w-max zoom-out image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
-        >
-          <img
-                class="rounded-[.2rem] min-h-[205px] md:min-h-[226px] lg:min-h-[auto] lg:h-[324px]"
-            src="/img/Magic-Fruits-KeyArt-1024x576.webp"
-            alt=""
-          />
-        </div>
-          </div>
-        <div
-          class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
-        >
-          <img
-              class="rounded-[.2rem] min-h-[205px] md:min-h-[167px] lg:min-h-[auto] lg:h-[324px]"
-            src="/img/minecraft.webp"
-            alt=""
-          />
-        </div>
-        <div
-          class="image-container image-overlay overflow-hidden transition-all duration-300 before:block before:z-[1] before:content-[''] before:absolute before:bottom-0 before:h-full before:w-full before:transition-all before:duration-500 before:ease-in-out hover:before:opacity-0 ease-in-out relative before:[background-image:linear-gradient(0deg,_rgb(7,_8,_15)_0%,_rgba(7,_8,_15,_0.12)_50%,_rgba(7,_8,_16,_0)_100%)]"
-        >
-          <img
-              class="rounded-[.2rem] min-h-[205px] md:min-h-[167px] lg:min-h-[auto] lg:h-[324px]"
-            src="/img/Hacker-Weapons-1024x576.webp"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-16 mt-auto">
       <nav data-scroll class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ul class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
           <li class="flex flex-col">
@@ -242,7 +244,7 @@ const jobs = [
               >Live-Events / Fundraisers / Promotions</a
             >
             <a href="#" class="text-xl text-white">
-            Game Development / World Creation / Multiplayer Servers
+              Game Development / World Creation / Multiplayer Servers
             </a>
             <a href="#" class="text-xl text-white"
               >3D Animation / 3D Rendering</a
@@ -261,15 +263,16 @@ const jobs = [
             <a href="#" class="text-xl text-white">Terms of Service</a>
           </li>
         </ul>
-      <form
-        action="#"
-        method="POST"
-        class="grid grid-cols-1 gap-6 sm:grid-cols-2"
-      >
-        <!-- Form fields go here -->
-      </form>
-    </div>
-  </footer>
+        <form
+          action="#"
+          method="POST"
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2"
+        >
+          <!-- Form fields go here -->
+        </form>
+      </nav>
+    </footer>
+  </div>
 </Layout>
 
 <script>
@@ -283,6 +286,13 @@ const jobs = [
   window.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector("[data-scroll-container]");
 
+    // get head component
+    const header = document.querySelector("#nav-header") as HTMLDivElement;
+    // navigation wrapper
+    const navWrapper = document.querySelector(
+      "#navigation-wrapper"
+    ) as HTMLDivElement;
+
     if (container) {
       const scroller = new LocomotiveScroll({
         el: container,
@@ -293,6 +303,11 @@ const jobs = [
         document.documentElement.setAttribute("data-direction", t.direction);
 
         ScrollTrigger.update();
+
+        // check if the navigation is open
+        const navOpen = navWrapper.dataset.open === "true";
+        //   // add background when scrolled > 300px and navigation is closed
+        header.dataset.showBg = `${t.scroll.y > 300 && !navOpen}`;
       });
 
       ScrollTrigger.scrollerProxy(container, {
@@ -312,31 +327,39 @@ const jobs = [
         pinType: container.style.transform ? "transform" : "fixed",
       });
 
-      const tl = gsap.timeline();
-      const el = document.querySelector(".zoom-out");
+      // const tl = gsap.timeline();
+      // const riseUptl = gsap.timeline();
+      // const el = document.querySelector(".zoom-out");
+      // const riseUpElements = document.querySelectorAll(".rise-up");
 
-      tl.fromTo(
-        el,
-        {
-          scrollTrigger: {
-            trigger: el,
-            start: "-300px center",
-            end: "bottom center",
-            markers: true,
-            scrub: true,
-            onEnter: () => {
-              console.log("enter trigger");
-            },
-            onLeave: () => {
-              console.log("leave trigger");
-            },
-          },
-          duration: 2,
-          scale: 2,
-          ease: Power1.easeIn,
-        },
-        { scale: 1 }
-      );
+      // tl.from(el, {
+      //   scrollTrigger: {
+      //     trigger: el,
+      //     start: "-300px center",
+      //     end: "bottom center",
+      //     markers: true,
+      //     scrub: true,
+      //     onEnter: () => {
+      //       console.log("enter trigger");
+      //     },
+      //     onLeave: () => {
+      //       console.log("leave trigger");
+      //     },
+      //   },
+      //   duration: 2,
+      //   scale: 2,
+      //   ease: Power1.easeIn,
+      // });
+
+      // riseUpElements.forEach((rEl) => {
+      //   riseUptl.from(rEl, {
+      //     scrollTrigger: {
+      //       trigger: rEl,
+      //     },
+      //     translateY: 10,
+      //     ease: Power1.easeIn,
+      //   });
+      // });
 
       // Update Locomotive Scroll on page resize
       window.addEventListener("resize", () => {
