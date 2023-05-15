@@ -1,19 +1,6 @@
 ---
 import Navigation from "../../components/Navigation.astro";
 import Layout from "../../layouts/Layout.astro";
-
-const { job: jobSlug } = Astro.params;
-
-const jobs = [
-  {
-    slug: "creative-director",
-    title: "Creative Director",
-  },
-  {
-    slug: "director",
-    title: "Director",
-  },
-];
 ---
 
 <Layout>
@@ -23,17 +10,17 @@ const jobs = [
       <div
         data-scroll
         data-scroll-speed="2"
-        class="intro min-h-[80vh] flex flex-col justify-center"
+        class="intro min-h-[50vh] flex flex-col justify-end"
       >
         <h1
           class="max-w-[25ch] text-4xl sm:text-5xl lg:text-7xl font-black uppercase"
         >
-          <span class="block">Some Of</span>
-          <span class="block mt-2 text-[#9C44FC]">Our Work</span>
+          <span class="block">Jobs</span>
+          <span class="block mt-2 text-[#9C44FC]">Creative Director</span>
         </h1>
       </div>
 
-      <div data-scroll data-scroll-speed="2" class="pt-8 mt-28">
+      <div data-scroll data-scroll-speed="2" class="pt-8">
         <div class="grid grid-cols-1 md:grid-cols-[0.5fr_45ch] gap-8 lg:gap-0">
           <div class="">
             <p
