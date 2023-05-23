@@ -25,7 +25,7 @@ module.exports = {
             transform: "translateX(0)",
           },
           to: {
-            transform: "translateX(calc(-100% - 2rem))",
+            transform: "translateX(calc(-100% - var(--scroll-gap,2rem) ))",
           },
         },
       },
