@@ -9,7 +9,6 @@ import ScrollingText from "../components/ScrollingText.astro";
   <Navigation />
   <Preloader />
   <div data-scroll-container class="overflow-hidden isolate">
-    {/* HERO */}
     <div class="relative h-screen lg:h-[110vh] overflow-hidden">
       <div
         data-scroll
@@ -45,7 +44,6 @@ import ScrollingText from "../components/ScrollingText.astro";
       </div>
     </div>
 
-    {/* SECTION 2 */}
     <div class="relative z-30">
       <div
         class="px-5 pb-8 lg:px-8 pt-16 sm:pt-28 lg:pt-32 lg:pb-20 max-w-[120rem] mx-auto flex flex-col gap-10 sm:gap-14"
@@ -90,6 +88,59 @@ import ScrollingText from "../components/ScrollingText.astro";
       </div>
     </div>
 
+    <div class="relative z-30">
+      <div
+        class="px-5 pb-8 lg:px-8 pt-16 sm:pt-28 lg:pt-32 lg:pb-20 max-w-[120rem] mx-auto flex flex-col gap-10 sm:gap-14"
+      >
+        <h1
+          class="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-black uppercase"
+        >
+          <span class="block">Bringing Ideas</span>
+          <span class="text-[#9C44FC]">To Life</span>
+        </h1>
+        <div class="flex items-start max-w-[80rem]">
+          <p
+            class="text-xl md:text-2xl leading-9 lg:text-4xl lg:leading-[1.55] pl-5 md:pl-10 border-l-2 md:border-l-4 py-1 md:py-2 md:ml-12 lg:ml-20"
+          >
+            A young team consisting of creative minds that are really passionate
+            about Minecraft. It's our expression of art, we love to create stuff
+            and bring joy to children.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2">
+          <div class="aspect-video">
+            <img
+              alt=""
+              src="/img/minecraft.webp"
+              class="w-full h-full object-left rounded-xl"
+            />
+          </div>
+
+          <div class="flex flex-col sm:mx-4 gap-5 pt-2">
+            <div
+              class="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold uppercase text-[#9C44FC]"
+            >
+              2
+              <span class="block text-xl text-white/90">Years Experience</span>
+            </div>
+            <div
+              class="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold uppercase text-[#9C44FC]"
+            >
+              11
+              <span class="block text-xl text-white/90">Completed Projects</span
+              >
+            </div>
+            <div
+              class="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold uppercase text-[#9C44FC]"
+            >
+              120.000
+              <span class="block text-xl text-white/90">Downloaded Games</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div
       class="horizontal-scroll overflow-hidden left-0 max-w-[120rem] pt-5 sm:pt-24 mx-auto"
     >
@@ -100,7 +151,9 @@ import ScrollingText from "../components/ScrollingText.astro";
           class="pin-wrapper pt-8 grid grid-cols-1 sm:grid-cols-[repeat(5,550px)] lg:grid-cols-[repeat(5,700px)] gap-10"
         >
           <div class="flex flex-col">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black uppercase">
+            <h1
+              class="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-black uppercase"
+            >
               <span class="block">Some Of</span>
               <span class="block mt-2 text-[#9C44FC]">Our Work</span>
             </h1>
@@ -176,11 +229,17 @@ import ScrollingText from "../components/ScrollingText.astro";
             </div>
           </a>
 
-          <a href="#" class="flex items-center sm:items-start h-full w-full">
+          <a href="#" class="flex flex-col justify-center w-full h-full">
             <div
               class="bg-[#9C44FC] rounded-xl w-full h-[auto] sm:h-[390px] mb-0 sm:mb-6 flex justify-start sm:justify-center items-center"
             >
               <p class="text-2xl sm:text-[2.25rem]">Check all of Our Games</p>
+            </div>
+            <div class="w-auto">
+              <h3 class="text-2xl sm:text-[2.25rem]">Magic Fruits</h3>
+              <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
+                One of our amazing universes.
+              </p>
             </div>
           </a>
         </div>
