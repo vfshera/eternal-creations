@@ -1,8 +1,11 @@
-<div id="nav-header" class="fixed top-0 inset-x-0 w-full h-auto py-2 px-6 sm:px-8 lg:py-8 z-50 transition-[background-color] duration-300 data-[show-bg='true']:bg-[#0c0f16]">
+<div
+  id="nav-header"
+  class="fixed top-0 inset-x-0 w-full h-auto py-2 px-6 sm:px-8 lg:py-8 z-50 transition-[background-color] duration-300 data-[show-bg='true']:bg-[#0c0f16]"
+>
   <div class="relative max-w-[120rem] mx-auto z-20">
     <div class="flex justify-between items-center">
       <a href="/" class="hoverable" aria-label="Home">
-        <img class="w-32 h-auto" alt="" src="/img/logo_white.png" />
+        <img class="w-32 h-auto" alt="" src="/img/logo_white.webp" />
       </a>
       <button
         id="navigation__button"
@@ -22,7 +25,6 @@
     </div>
   </div>
 </div>
-
 
 <div
   id="navigation-wrapper"
@@ -60,7 +62,7 @@
         <a
           href="/about"
           href="/about"
-         class="text-xl sm:text-4xl uppercase font-black hover:text-[#9C44FC]"
+          class="text-xl sm:text-4xl uppercase font-black hover:text-[#9C44FC]"
           >About</a
         >
       </li>
@@ -68,7 +70,9 @@
   </nav>
 </div>
 <script>
-  const navWrapper = document.querySelector("#navigation-wrapper") as HTMLDivElement;
+  const navWrapper = document.querySelector(
+    "#navigation-wrapper"
+  ) as HTMLDivElement;
   const header = document.querySelector("#nav-header") as HTMLDivElement;
   const HEADER_TOGGLE_CLASS = "!pb-0";
 
@@ -97,7 +101,11 @@
     const target = event.target as HTMLElement;
     const isNavigationOpen = navWrapper.dataset.open === "true";
 
-    if (isNavigationOpen && !navWrapper.contains(target) && target.id !== "navigation__button") {
+    if (
+      isNavigationOpen &&
+      !navWrapper.contains(target) &&
+      target.id !== "navigation__button"
+    ) {
       toggleNavigation();
     }
   });
