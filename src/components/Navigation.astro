@@ -1,8 +1,4 @@
-<div
-  id="nav-header"
-  data-show-bg
-  class="fixed top-0 inset-x-0 w-full h-auto py-2 px-6 sm:px-8 lg:py-8 z-50 transition-[background-color] duration-300 data-[show-bg='true']:bg-[#0c0f16]"
->
+<div id="nav-header" class="fixed top-0 inset-x-0 w-full h-auto py-2 px-6 sm:px-8 lg:py-8 z-50 transition-[background-color] duration-300 data-[show-bg='true']:bg-[#0c0f16]">
   <div class="relative max-w-[120rem] mx-auto z-20">
     <div class="flex justify-between items-center">
       <a href="/" class="hoverable" aria-label="Home">
@@ -26,6 +22,7 @@
     </div>
   </div>
 </div>
+
 
 <div
   id="navigation-wrapper"
@@ -62,30 +59,28 @@
       <li class="">
         <a
           href="/about"
-          class="text-xl sm:text-4xl uppercase font-black hover:text-[#9C44FC]"
+          href="/about"
+         class="text-xl sm:text-4xl uppercase font-black hover:text-[#9C44FC]"
           >About</a
         >
       </li>
     </ul>
   </nav>
 </div>
-
 <script>
-  const navWrapper = document.querySelector(
-    "#navigation-wrapper"
-  ) as HTMLDivElement;
-
+  const navWrapper = document.querySelector("#navigation-wrapper") as HTMLDivElement;
   const header = document.querySelector("#nav-header") as HTMLDivElement;
-
   const HEADER_TOGGLE_CLASS = "!pb-0";
 
   document.getElementById("navigation__button").onclick = () => {
-    //check is bg is shown
-    const headerHasBg = header.dataset.showBg === "true";
+    toggleNavigation();
+  };
 
+  // Function to toggle navigation
+  function toggleNavigation() {
+    const headerHasBg = header.dataset.showBg === "true";
     navWrapper.dataset.open = `${!(navWrapper.dataset.open === "true")}`;
 
-    // helps links to be clickable
     if (navWrapper.dataset.open === "true") {
       header.classList.add(HEADER_TOGGLE_CLASS);
     } else {
@@ -93,10 +88,19 @@
     }
 
     if (navWrapper.dataset.open === "true" && headerHasBg) {
-      // remove header bg if navigation is opened
       header.dataset.showBg = "false";
     }
-  };
+  }
+
+  // Close navigation when clicking outside the navigation area
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    const isNavigationOpen = navWrapper.dataset.open === "true";
+
+    if (isNavigationOpen && !navWrapper.contains(target) && target.id !== "navigation__button") {
+      toggleNavigation();
+    }
+  });
 </script>
 
 <style is:global>
