@@ -1,168 +1,79 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Preloader from "../components/Preloader.astro";
-//import Marquee from '../components/Marquee.jsx';
+import WorkCard from "../components/WorkCard.astro";
 import Navigation3 from "../components/Navigation.astro";
-//import ProjectMarquee from '../components/ProjectMarquee.jsx';
 ---
 
 <Layout title="Work">
-  <main data-scroll-container class="">
+  <main data-scroll-container class="pb-20">
     <div class="mt-6 px-8 max-w-hd mx-auto">
       <Navigation3 />
     </div>
 
-    <div class="my-16 md:my-24 px-8 max-w-hd mx-auto text-secondary">
-      <h2
-        class="text-6xl md:text-7xl font-medium leading-[1.2] -tracking-[0.03em] max-w-[85rem]"
-      >
-        2023
-      </h2>
-    </div>
-
     <div
-      class="my-12 md:my-16 px-8 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-hd mx-auto"
+      class="mt-16 md:mt-28 pt-14 md:pt-5 lg:pt-20 px-8 md:px-10 lg:px-20 max-w-hd mx-auto text-secondary"
     >
-      <div class="bg-[#f5f5f5] flex justify-between flex-col w-full h-full">
-        <div class="h-full" style="aspect-ratio:16/7">
-          <img
-            draggable="false"
-            src="https://cdn.discordapp.com/attachments/624244059615002629/1097946478296715325/theia_dimension_render.webp"
-            class="block w-full h-full object-top object-cover Yrounded-2xl z-10 relative transition-opacity"
-            alt=""
-          />
-        </div>
-
-        <div class="p-8 flex justify-between">
-          <div>
-            <h3 class="text-3xl">Theia Dimension</h3>
-            <p class="text-xl text-gray-600">
-              Explore Minecraft in a another dimension.
-            </p>
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="currentColor"
-            viewBox="0 0 256 256"
-            ><rect width="256" height="256" fill="none"></rect><line
-              x1="64"
-              y1="192"
-              x2="192"
-              y2="64"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></line><polyline
-              points="88 64 192 64 192 168"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></polyline></svg
-          >
-        </div>
-      </div>
-
-      <div class="bg-[#f5f5f5] flex justify-between flex-col w-full h-full">
-        <div style="aspect-ratio:16/7">
-          <img
-            draggable="false"
-            src="https://cdn.discordapp.com/attachments/624244059615002629/1097946479143956560/weapons__dragons_v4.webp"
-            class="block w-full h-full object-top object-cover Yrounded-2xl z-10 relative transition-opacity"
-            alt=""
-          />
-        </div>
-
-        <div class="p-8 flex justify-between">
-          <div>
-            <h3 class="text-3xl">Theia Dimension</h3>
-            <p class="text-xl text-gray-600">
-              Explore Minecraft in a another dimension.
-            </p>
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="currentColor"
-            viewBox="0 0 256 256"
-            ><rect width="256" height="256" fill="none"></rect><line
-              x1="64"
-              y1="192"
-              x2="192"
-              y2="64"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></line><polyline
-              points="88 64 192 64 192 168"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></polyline></svg
-          >
-        </div>
-      </div>
-    </div>
-
-    <div class="my-16 md:my-24 px-8 max-w-hd mx-auto text-secondary">
-      <h2
-        class="text-6xl md:text-7xl font-medium leading-[1.2] -tracking-[0.03em] max-w-[85rem]"
+      <h1
+        class="text-3xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase"
       >
-        2022
-      </h2>
-    </div>
-
-    <div
-      class="my-12 md:my-16 px-8 max-w-hd mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8"
-    >
-      <div class="bg-[#f5f5f5] flex justify-between flex-col w-full h-full">
-        <div style="aspect-ratio:16/7" class="overflow-hidden">
-          <img
-            draggable="false"
-            src="https://cdn.discordapp.com/attachments/624244059615002629/1097946480041533562/portal_unlimited_render_2.webp"
-            class="block w-full h-full object-top object-cover Yrounded-2xl z-10 relative transition-opacity"
-            alt=""
+        <span class="">Our</span>
+        <span class="text-[#9C44FC]">Games</span>
+      </h1>
+      <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-hd mx-auto">
+        <div class="md:col-span-2">
+          <WorkCard
+            title="Theia Dimension"
+            subTitle="One of our amazing universes."
+            image="/img/ztd.webp"
           />
         </div>
-
-        <div class="p-8 flex justify-between">
-          <div>
-            <h3 class="text-3xl">Theia Dimension</h3>
-            <p class="text-xl text-gray-600">
-              Explore Minecraft in a another dimension.
-            </p>
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="currentColor"
-            viewBox="0 0 256 256"
-            ><rect width="256" height="256" fill="none"></rect><line
-              x1="64"
-              y1="192"
-              x2="192"
-              y2="64"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></line><polyline
-              points="88 64 192 64 192 168"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></polyline></svg
-          >
-        </div>
+        <WorkCard
+          title="Dino Park"
+          subTitle="One of our amazing universes."
+          image="/img/ztd.webp"
+        />
+        <WorkCard
+          title="Zombie Tower Defense"
+          subTitle="One of our amazing universes."
+          image="/img/zombie_tower_defense_keyart.webp"
+        />
+        <WorkCard
+          title="Dino Park"
+          subTitle="One of our amazing universes."
+          image="/img/ztd.webp"
+        />
+        <WorkCard
+          title="Zombie Tower Defense"
+          subTitle="One of our amazing universes."
+          image="/img/zombie_tower_defense_keyart.webp"
+        />
+        <WorkCard
+          title="Dino Park"
+          subTitle="One of our amazing universes."
+          image="/img/ztd.webp"
+        />
+        <WorkCard
+          title="Zombie Tower Defense"
+          subTitle="One of our amazing universes."
+          image="/img/zombie_tower_defense_keyart.webp"
+        />
       </div>
     </div>
   </main>
 </Layout>
+
+<script>
+  // get head component
+  const header = document.querySelector("#nav-header") as HTMLDivElement;
+  // navigation wrapper
+  const navWrapper = document.querySelector(
+    "#navigation-wrapper"
+  ) as HTMLDivElement;
+
+  window.onscroll = () => {
+    // check if the navigation is open
+    const navOpen = navWrapper.dataset.open === "true";
+    //   // add background when scrolled > 300px and navigation is closed
+    header.dataset.showBg = `${window.scrollY > 300 && !navOpen}`;
+  };
+</script>
