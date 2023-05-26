@@ -7,38 +7,37 @@ import Navigation from "../components/Navigation.astro";
   <Navigation />
 
   <div data-scroll-container class="overflow-hidden">
-    <div data-scroll-section class="relative h-[60vh] overflow-hidden">
-      <div
-        data-scroll
-        data-scroll-speed="-2"
-        class="absolute inset-0 py-48 flex h-full justify-center items-center text-center flex-col gap-8 mx-auto z-30 w-full"
+    <div
+      data-scroll-section
+      class="mt-16 md:mt-28 pt-14 md:pt-5 lg:py-20 px-8 md:px-10 lg:px-20 max-w-hd mx-auto text-secondary"
+    >
+      <h1
+        class="text-3xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase"
       >
-        <h1 class="text-9xl text-white font-black uppercase">
-          <span class="block">Extreme</span>
-          <span class="block">Weapons</span>
-        </h1>
-      </div>
-      <div
-        class="absolute inset-x-0 inset-y-0 w-full h-full bg-gradient-to-b from-[rgba(166,81,255,0.5)] to-[#9E42FF] z-20"
-      >
-      </div>
-      <div
-        class="absolute inset-x-0 inset-y-0 w-full h-full bg-gradient-to-b from-[rgba(0,81,0,0)] to-[#000] z-10"
-      >
-      </div>
-      <img
-        alt=""
-        src="/img/EW_keyArt-1024x576.webp"
-        class="w-full h-full brightness-75 object-cover"
-      />
-      {
-        /*<video autoplay muted loop class="w-full h-full brightness-75 object-cover">
-				<source src="/video/video1.webm" type="video/webm" />
-            </video>*/
-      }
-    </div>
+        <span class="block">Zombie</span>
+        <span class="text-[#9C44FC]">Tower Defense</span>
+      </h1>
 
-    <div data-scroll-section class="pb-[300vh]">asdasd</div>
+      <div class="h-full w-full mt-5 aspect-video relative overflow-hidden">
+        <div
+          class="overlay bg-white/50 absolute inset-0 flex justify-center items-center"
+        >
+          <button
+            class="hover:shadow-xl flex justify-center items-center h-20 w-20 hover:h-24 hover:w-24 transition-all duration-300 group/play hover:bg-white/95 rounded-full"
+          >
+            <div
+              class="border-[30px] group-hover/play:scale-[.7] scale-90 border-r-0 border-transparent border-l-[50px] border-l-[#9C44FC] ml-1.5"
+            >
+            </div>
+          </button>
+        </div>
+        <img
+          src="/img/zombie_tower_defense_keyart.webp"
+          class="block w-full h-full object-top object-cover"
+          alt=""
+        />
+      </div>
+    </div>
   </div>
 </Layout>
 
