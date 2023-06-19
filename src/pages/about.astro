@@ -155,3 +155,19 @@ import Footer from "../components/Footer.astro";
   </div>
   <Footer />
 </Layout>
+
+<script>
+  // get head component
+  const header = document.querySelector("#nav-header") as HTMLDivElement;
+  // navigation wrapper
+  const navWrapper = document.querySelector(
+    "#navigation-wrapper"
+  ) as HTMLDivElement;
+
+  window.onscroll = () => {
+    // check if the navigation is open
+    const navOpen = navWrapper.dataset.open === "true";
+    // add background when scrolled > 300px and navigation is closed
+    header.dataset.showBg = `${window.scrollY > 300 && !navOpen}`;
+  };
+</script>
