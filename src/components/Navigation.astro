@@ -5,7 +5,7 @@
   <div class="relative max-w-[120rem] mx-auto z-20">
     <div class="flex justify-between items-center">
       <a href="/" class="hoverable" aria-label="Home">
-        <img class="w-32 h-auto" alt="" src="/img/logo_white.webp" />
+        <img class="w-52 h-auto" alt="" src="/img/logoet.webp" />
       </a>
       <button
         id="navigation__button"
@@ -76,7 +76,8 @@
   const header = document.querySelector("#nav-header") as HTMLDivElement;
   const HEADER_TOGGLE_CLASS = "!pb-0";
 
-  document.getElementById("navigation__button").onclick = () => {
+  document.getElementById("navigation__button").onclick = (event) => {
+    event.stopPropagation();
     toggleNavigation();
   };
 

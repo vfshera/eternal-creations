@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
@@ -19,10 +20,9 @@ import Navigation from "../components/Navigation.astro";
       </h1>
 
       <div class="h-full w-full mt-5 aspect-video relative overflow-hidden">
-        <div
-          class="overlay bg-white/50 absolute inset-0 flex justify-center items-center"
-        >
+        <div class="overlay absolute inset-0 flex justify-center items-center">
           <button
+            id="playButton"
             class="hover:shadow-xl flex justify-center items-center h-20 w-20 hover:h-24 hover:w-24 transition-all duration-300 group/play hover:bg-white/95 rounded-full"
           >
             <div
@@ -31,41 +31,45 @@ import Navigation from "../components/Navigation.astro";
             </div>
           </button>
         </div>
-        <img
-          src="/img/zombie_tower_defense_keyart.webp"
+        <iframe
+          id="videoPlayer"
           class="block w-full h-full object-top object-cover"
-          alt=""
-        />
+          src="video/intromarketplace.webm"
+          frameborder="0"
+          allowfullscreen></iframe>
       </div>
     </div>
 
     <section data-scroll-section class="flex flex-col md:flex-row mt-20 gap-5">
       <div class="w-full md:w-2/5">
         <p
-          class="text-xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5"
+          class="text-3xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5"
         >
-          We set out to create the most expansive dragons themed map on the
-          Minecraft Marketplace.How did it turn out? Well, see for yourself.
+          Our aim was to design a dynamic fusion of tower defense crafting and
+          survival elements within the Minecraft universe. How does it hold up
+          against the undead hordes? <br />Explore and decide for yourself.
         </p>
       </div>
       <div class="w-full md:w-3/5 flex flex-col gap-10">
         <div class="aspect-video relative overflow-hidden">
           <img
-            src="/img/zombie_tower_defense_keyart.webp"
+            src="/img/ZOMBIETOWERDEFENSE_MarketingScreenshot_0.webp"
             class="block w-full h-full object-top object-cover"
             alt=""
           />
         </div>
-        <div class="aspect-video relative overflow-hidden">
+        <!----PICTURE 2 -->
+        <div class="aspect-video relative overflow-visible">
           <img
-            src="/img/zombie_tower_defense_keyart.webp"
-            class="block w-full h-full object-top object-cover"
+            src="/img/ZOMBIETOWERDEFENSE_MarketingScreenshot_3.webp"
+            class="block absolute right-[20vw] object-center object-cover top-2"
             alt=""
           />
         </div>
+
         <div class="aspect-video relative overflow-hidden">
           <img
-            src="/img/zombie_tower_defense_keyart.webp"
+            src="/img/ZOMBIETOWERDEFENSE_MarketingScreenshot_5.webp"
             class="block w-full h-full object-top object-cover"
             alt=""
           />
@@ -81,36 +85,38 @@ import Navigation from "../components/Navigation.astro";
         class="aspect-video relative overflow-hidden md:col-span-2 md:row-span-2"
       >
         <img
-          src="/img/zombie_tower_defense_keyart.webp"
+          src="/img/zombie_tower_defense_render.webp"
           class="block w-full h-full object-top object-cover"
           alt=""
         />
       </div>
       <div class="">
         <p
-          class="text-xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5"
+          class="text-3xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5"
         >
-          Explore the custom apocalyptiv world we've created, and become
-          immersed in Zombie Tower Defense
+          Step into an apocalyptic landscape, vast and desolate, where survival
+          instincts are tested against the rugged canyon terrain. The raw beauty
+          of the world serves as a hauntingly perfect stage for the undead
+          showdown.
         </p>
       </div>
       <div class="aspect-video relative overflow-hidden">
         <img
-          src="/img/cool.webp"
+          src="/img/zombie-defense-r2.webp"
           class="block w-full h-full object-top object-cover"
           alt=""
         />
       </div>
       <div class="aspect-video relative overflow-hidden">
         <img
-          src="/img/cool.webp"
+          src="/img/zombie-defense-r1.webp"
           class="block w-full h-full object-top object-cover"
           alt=""
         />
       </div>
       <div class="aspect-video relative overflow-hidden">
         <img
-          src="/img/cool.webp"
+          src="/img/zombie-defense-r3.webp"
           class="block w-full h-full object-top object-cover"
           alt=""
         />
@@ -120,10 +126,11 @@ import Navigation from "../components/Navigation.astro";
     <section data-scroll-section class="grid grid-cols-1 md:grid-cols-2 mt-20">
       <div class="p-5 pl-0">
         <p
-          class="text-xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5"
+          class="text-3xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5"
         >
-          Explore the custom apocalyptiv world we've created, and become
-          immersed in Zombie Tower Defense
+          Craft, upgrade, and strategically place a range of formidable turrets
+          and cunning traps. Each one offering unique advantages to keep the
+          relentless undead at bay. Master them all to conquer the hordes.
         </p>
       </div>
       <div class="aspect-video bg-gray-600 flex items-center justify-center">
@@ -133,6 +140,7 @@ import Navigation from "../components/Navigation.astro";
       <div class="aspect-video bg-gray-600"></div>
     </section>
   </div>
+  <Footer />
 </Layout>
 
 <script>

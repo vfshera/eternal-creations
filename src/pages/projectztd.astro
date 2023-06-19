@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
+---
+
+<Layout>
+  <Navigation />
+
+  <div
+    data-scroll-container
+    class="overflow-hidden pt-14 md:pt-5 lg:py-20 px-8 md:px-10 lg:px-20"
+  >
+    <div data-scroll-section class="mt-16 md:mt-28 mx-auto">
+      <h1
+        class="text-3xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase"
+      >
+        <span class="block">Zombie</span>
+        <span class="text-[#9C44FC]">Tower Defense</span>
+      </h1>
+
+      <div class="h-full w-full mt-5 aspect-video relative overflow-hidden">        
+        <div class="overlay absolute inset-0 flex justify-center items-center">
+  
+          <button id="playButton" class="hover:shadow-xl flex justify-center items-center h-20 w-20 hover:h-24 hover:w-24 transition-all duration-300 group/play hover:bg-white/95 rounded-full">            <div
+              class="border-[30px] group-hover/play:scale-[.7] scale-75 md:scale-90 border-r-0 border-transparent border-l-[50px] border-l-[#9C44FC] ml-1.5"
+            >
+            </div>
+          </button>
+        </div>
+        <iframe
+        id="videoPlayer"
+        class="block w-full h-full object-top object-cover"
+        src="video/video1.webm"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      </div>
+    </div>
+
+    <section data-scroll-section class="flex flex-col md:flex-row mt-20 gap-5">
+      <div class="w-full md:w-2/5">
+        <p class="text-3xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5">
+        Explore the custom apocalyptiv world we've created, and become
+        immersed in Zombie Tower Defense
+        Explore the custom apocalyptiv world we've created, and become
+        immersed in Zombie Tower Defense
+        </p>
+      </div>
+      <div class="w-full md:w-3/5 flex flex-col gap-10">
+        <div class="aspect-video relative overflow-hidden">
+          <img
+            src="/img/zombie_tower_defense_keyart.webp"
+            class="block w-full h-full object-top object-cover"
+            alt=""
+          />
+        </div>
+        <!----PICTURE 2 -->
+        <div class="aspect-video relative overflow-visible">
+          <img src="/img/zombie_tower_defense_keyart.webp" class="block absolute right-[20vw] object-center object-cover top-2" alt="" />
+        </div>
+        
+        
+        
+        
+        <div class="aspect-video relative overflow-hidden">
+          <img
+            src="/img/zombie_tower_defense_keyart.webp"
+            class="block w-full h-full object-top object-cover"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-scroll-section
+      class="grid grid-cols-1 md:grid-cols-2 mt-20 gap-10"
+    >
+      <div
+        class="aspect-video relative overflow-hidden md:col-span-2 md:row-span-2"
+      >
+        <img
+          src="/img/zombie_tower_defense_keyart.webp"
+          class="block w-full h-full object-top object-cover"
+          alt=""
+        />
+      </div>
+      <div class="">
+        <p
+          class="text-3xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5"
+        >
+          Explore the custom apocalyptiv world we've created, and become
+          immersed in Zombie Tower Defense
+          Explore the custom apocalyptiv world we've created, and become
+          immersed in Zombie Tower Defense
+        </p>
+      </div>
+      <div class="aspect-video relative overflow-hidden">
+        <img
+          src="/img/cool.webp"
+          class="block w-full h-full object-top object-cover"
+          alt=""
+        />
+      </div>
+      <div class="aspect-video relative overflow-hidden">
+        <img
+          src="/img/cool.webp"
+          class="block w-full h-full object-top object-cover"
+          alt=""
+        />
+      </div>
+      <div class="aspect-video relative overflow-hidden">
+        <img
+          src="/img/cool.webp"
+          class="block w-full h-full object-top object-cover"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <section data-scroll-section class="grid grid-cols-1 md:grid-cols-2 mt-20">
+      <div class="p-5 pl-0">
+        <p
+          class="text-3xl pl-5 border-l-2 md:border-l-[6px] py-1 md:py-2 md:ml-5"
+        >
+        Explore the custom apocalyptiv world we've created, and become
+        immersed in Zombie Tower Defense
+        Explore the custom apocalyptiv world we've created, and become
+        immersed in Zombie Tower Defense
+        </p>
+      </div>
+      <div class="aspect-video bg-gray-600 flex items-center justify-center">
+        <p class="uppercase text-4xl text-center">platzhalter</p>
+      </div>
+      <div class="aspect-video bg-gray-600"></div>
+      <div class="aspect-video bg-gray-600"></div>
+    </section>
+  </div>
+  <Footer />
+
+</Layout>
+
+
+<script>
+  import LocomotiveScroll from "locomotive-scroll";
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+  });
+
+  // get head component
+  const header = document.querySelector("#nav-header") as HTMLDivElement;
+  // navigation wrapper
+  const navWrapper = document.querySelector(
+    "#navigation-wrapper"
+  ) as HTMLDivElement;
+
+  scroll.on("scroll", (t) => {
+    document.documentElement.setAttribute("data-direction", t.direction);
+
+    // check if the navigation is open
+    const navOpen = navWrapper.dataset.open === "true";
+    //   // add background when scrolled > 300px and navigation is closed
+    header.dataset.showBg = `${t.scroll.y > 300 && !navOpen}`;
+  });
+
+
+</script>

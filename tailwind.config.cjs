@@ -6,10 +6,7 @@ module.exports = {
       fontSize: {
         "10xl": "10rem",
       },
-      textColor: {
-        accent: "#9C44FC",
-      },
-      backgroundColor: {
+      colors: {
         accent: "#9C44FC",
       },
       borderRadius: {

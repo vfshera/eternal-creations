@@ -21,46 +21,68 @@ import Navigation3 from "../components/Navigation.astro";
       </h1>
       <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-hd mx-auto">
         <div class="md:col-span-2">
-          <WorkCard
-            title="Theia Dimension"
-            subTitle="One of our amazing universes."
-            image="/img/ztd.webp"
-          />
+          <a href="project">
+            <!-- First Picture -->
+            <WorkCard
+              title="Zombie Tower Defense"
+              subTitle="One of our amazing universes."
+              image="/img/zombie_tower_defense_keyart.webp"
+              class="zoom-image"
+              imgWrapperClass="max-h-[80vh]"
+            />
+          </a>
         </div>
-        <WorkCard
-          title="Dino Park"
-          subTitle="One of our amazing universes."
-          image="/img/ztd.webp"
-        />
-        <WorkCard
-          title="Zombie Tower Defense"
-          subTitle="One of our amazing universes."
-          image="/img/zombie_tower_defense_keyart.webp"
-        />
-        <WorkCard
-          title="Dino Park"
-          subTitle="One of our amazing universes."
-          image="/img/ztd.webp"
-        />
-        <WorkCard
-          title="Zombie Tower Defense"
-          subTitle="One of our amazing universes."
-          image="/img/zombie_tower_defense_keyart.webp"
-        />
-        <WorkCard
-          title="Dino Park"
-          subTitle="One of our amazing universes."
-          image="/img/ztd.webp"
-        />
-        <WorkCard
-          title="Zombie Tower Defense"
-          subTitle="One of our amazing universes."
-          image="/img/zombie_tower_defense_keyart.webp"
-        />
+        <a href="project">
+          <WorkCard
+            title="Portal Unlimited"
+            subTitle="One of our amazing universes."
+            image="/img/portal_unlimited_render_2.webp"
+          />
+        </a>
+        <a href="project">
+          <WorkCard
+            title="Room Rush"
+            subTitle="One of our amazing universes."
+            image="/img/room_rush_keyart.webp"
+          />
+        </a>
+        <a href="projectwp">
+          <WorkCard
+            title="Weapons Dragons"
+            subTitle="Unleash Power, Tame the Beasts."
+            image="/img/weapons_+_dragons_v4.webp"
+          />
+        </a>
+        <a href="project">
+          <WorkCard
+            title="Dino Park"
+            subTitle="Build Your Own Dino World"
+            image="/img/dino_park_render_v3.webp"
+          />
+        </a>
+        <a href="project">
+          <WorkCard
+            title="Ultimate Modpack"
+            subTitle="Infinite Possibilities, One Modpack."
+            image="/img/ump_white_background.webp"
+          />
+        </a>
+        <a href="project">
+          <WorkCard
+            title="Theia Dimensions"
+            subTitle="Unveiling Uncharted Experiences"
+            image="/img/theia_dimension_render.webp"
+          />
+        </a>
       </div>
     </div>
   </main>
 </Layout>
+<style>
+  .arrow:hover {
+    color: #9c44fc; /* Set the desired purple color */
+  }
+</style>
 
 <script>
   // get head component
@@ -73,7 +95,7 @@ import Navigation3 from "../components/Navigation.astro";
   window.onscroll = () => {
     // check if the navigation is open
     const navOpen = navWrapper.dataset.open === "true";
-    //   // add background when scrolled > 300px and navigation is closed
+    // add background when scrolled > 300px and navigation is closed
     header.dataset.showBg = `${window.scrollY > 300 && !navOpen}`;
   };
 </script>

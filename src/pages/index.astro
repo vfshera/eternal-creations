@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
 import Preloader from "../components/Preloader.astro";
 import ScrollingText from "../components/ScrollingText.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
@@ -18,9 +19,6 @@ import ScrollingText from "../components/ScrollingText.astro";
         <h1 class="text-4xl md:text-5xl lg:text-8xl font-black">
           <span class="block opacity-80">creations for eternity.</span>
         </h1>
-        <p class="text-xl sm:text-2xl lg:text-4xl font-semibold opacity-80">
-          Building your Minecraft dreams into reality.
-        </p>
       </div>
       <div
         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(166,81,255,0.5)] to-[#9E42FF] z-20"
@@ -46,14 +44,16 @@ import ScrollingText from "../components/ScrollingText.astro";
       <div
         class="px-5 pb-8 lg:px-8 pt-16 sm:pt-28 lg:pt-32 lg:pb-20 max-w-[120rem] mx-auto flex flex-col gap-10 sm:gap-14"
       >
-        <h1 class="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-black">
-          <span class="">we are</span>
-          <span class="text-[#9C44FC]">eternal creations</span>
+        <h1
+          class="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-black uppercase"
+        >
+          <span class="">we are</span><br />
+          <span class="text-[#9C44FC]">ETERNAL CREATIONS</span>
         </h1>
         <div class="flex flex-col gap-5 sm:flex-row">
           <div class="w-full sm:w-1/2 pb-10">
             <div
-              class="h-[250px] sm:h-full rounded-xl w-full bg-slate-50/10 text-xl text-[#9C44FC]/60 grid place-content-center"
+              class="h-[250px] sm:h-full rounded-xl w-full text-xl text-[#9C44FC]/60 grid place-content-center"
             >
               <img
                 alt=""
@@ -66,16 +66,16 @@ import ScrollingText from "../components/ScrollingText.astro";
           <div
             class="flex flex-col justify-end sm:mx-4 gap-8 sm:gap-6 lg:gap-14 pb-5 lg:mx-32 w-full sm:w-1/2"
           >
-            <div class="flex items-start max-w-[80rem]">
-              <p class="leading-9 lg:text-2xl lg:leading-[1.55]">
-                A young team consisting of creative minds that are really
-                passionate about Minecraft. It's our expression of art, we love
-                to create stuff and bring joy to children.
+            <div class="flex items-start max-w-[80rem] h-[200px]">
+              <p class="leading-2 lg:text-3xl lg:leading-[1.55]">
+                We are a global team of Minecraft creators.<br /> Founded in 2019,
+                we're dedicated to producing <br /> high-quality, immersive content,
+                reimagining gaming experiences and shaping the future of Minecraft.
               </p>
             </div>
 
             <a
-              href="/projects"
+              href="/work"
               class="block w-fit group relative overflow-hidden text-white leading-[1.4] rounded-full border-2 border-gray-400 border-solid py-3 lg:py-4 px-6 lg:px-8 hover:border-[#9C44FC] text-left"
               style="transition: border .3s ease .05s;"
             >
@@ -92,7 +92,9 @@ import ScrollingText from "../components/ScrollingText.astro";
       <div
         class="px-5 pb-8 lg:px-8 pt-16 sm:pt-28 lg:pt-32 lg:pb-20 max-w-[120rem] mx-auto flex flex-col gap-10 sm:gap-14"
       >
-        <h1 class="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-black">
+        <h1
+          class="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-black uppercase"
+        >
           <span class="block">bringing ideas</span>
           <span class="text-[#9C44FC]">to life</span>
         </h1>
@@ -100,39 +102,38 @@ import ScrollingText from "../components/ScrollingText.astro";
           <p
             class="text-xl md:text-1xl leading-9 lg:text-3xl lg:leading-[1.55] pl-5 md:pl-10 border-l-2 md:border-l-4 py-1 md:py-2 md:ml-12 lg:ml-20"
           >
-            A young team consisting of creative minds that are really passionate
-            about Minecraft. It's our expression of art, we love to create stuff
-            and bring joy to children.
+            Transforming visions into engaging, immersive realities. Harnessing
+            our diverse skills and shared passion, we're committed to delivering
+            unique Minecraft experiences that captivate and inspire.
           </p>
         </div>
         <div class="grid grid-cols-1 gap-10 sm:grid-cols-2">
           <div class="aspect-video">
             <img
               alt=""
-              src="/img/cool.webp"
+              src="/img/render1.webp"
               class="w-full h-full object-left rounded-xl"
             />
           </div>
 
           <div class="flex flex-col sm:mx-4 gap-5 pt-2">
             <div
-              class="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold uppercase text-[#9C44FC]"
+              class="text-4xl sm:text-3xl md:text-3xl lg:text-3xl font-bold uppercase text-white/90"
             >
-              2
-              <span class="block text-xl text-white/90">Years Experience</span>
+              <span class="block text-5xl text-[#9C44FC]">3</span>
+              Years
             </div>
             <div
-              class="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold uppercase text-[#9C44FC]"
+              class="text-4xl sm:text-3xl md:text-3xl lg:text-3xl font-bold uppercase text-white/90"
             >
-              11
-              <span class="block text-xl text-white/90">Completed Projects</span
-              >
+              <span class="block text-5xl text-[#9C44FC]">7</span>
+              Projects
             </div>
             <div
-              class="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold uppercase text-[#9C44FC]"
+              class="text-4xl sm:text-3xl md:text-3xl lg:text-3xl font-bold uppercase text-white/90"
             >
-              120.000
-              <span class="block text-xl text-white/90">Downloaded Games</span>
+              <span class="block text-5xl text-[#9C44FC]">150.000+</span>
+              Downloaded Games
             </div>
           </div>
         </div>
@@ -149,7 +150,9 @@ import ScrollingText from "../components/ScrollingText.astro";
           class="pin-wrapper pt-8 grid grid-cols-1 sm:grid-cols-[repeat(5,550px)] lg:grid-cols-[repeat(5,700px)] gap-10"
         >
           <div class="flex flex-col">
-            <h1 class="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-black">
+            <h1
+              class="text-3xl sm:text-2xl md:text-4xl lg:text-6xl font-black uppercase"
+            >
               <span class="block">some of</span>
               <span class="block mt-2 text-[#9C44FC]">our work</span>
             </h1>
@@ -157,9 +160,11 @@ import ScrollingText from "../components/ScrollingText.astro";
               <p
                 class="text-3xl lg:text-3x1 lg:leading-tight mt-8 mb-10 lg:my-16 max-w-[95%] lg:max-w-[80rem]"
               >
-                <span class="block">We build amazing worlds. Every day.</span>
                 <span class="block"
-                  >Here is a selection of our personal favorites.</span
+                  >Crafting extraordinary worlds is our passion.</span
+                >
+                <span class="block">
+                  Explore a selection of our personal favorites.</span
                 >
               </p>
               <a
@@ -168,108 +173,100 @@ import ScrollingText from "../components/ScrollingText.astro";
                 style="transition: border .3s ease .05s;"
               >
                 <span class="relative text-xl sm:text-[1.85rem] z-10"
-                  >Explore All Our Worlds</span
+                  >Explore All Our Games</span
                 >
               </a>
             </div>
           </div>
           <a
-            href="#"
-            class="flex flex-col justify-center w-full h-full hoverable"
+            href="/projectztd"
+            class="flex flex-col justify-center w-full h-full hoverable hover:text-purple-500"
             aria-label="View"
           >
-            <div class="w-full h-full mb-3 sm:mb-6">
+            <div class="w-full h-full mb-3 sm:mb-6 hover:scale-105">
               <img
                 alt=""
                 src="/img/zombie_tower_defense_keyart.webp"
-                class="w-full h-ful object-left rounded-xl"
+                class="w-full h-ful object-left"
               />
             </div>
             <div class="w-auto">
               <h3 class="text-2xl sm:text-[2.25rem]">Zombie Tower Defense</h3>
               <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
-                One of our amazing universes.
+                Strategic Survival in the Undead Uprising.
               </p>
             </div>
           </a>
 
-          <a href="#" class="flex flex-col justify-center w-full h-full">
-            <div class="w-full h-full mb-3 sm:mb-6">
+          <a
+            href="/projectrr"
+            class="flex flex-col justify-center w-full h-full hover:text-purple-500"
+          >
+            <div class="w-full h-full mb-3 sm:mb-6 hover:scale-105">
               <img
                 alt=""
-                src="/img/ztd.webp"
-                class="w-full h-ful object-left rounded-xl"
+                src="/img/room_rush_keyart.webp"
+                class="w-full h-ful object-left"
               />
             </div>
             <div class="w-auto">
-              <h3 class="text-2xl sm:text-[2.25rem]">Hacker Weapons</h3>
+              <h3 class="text-2xl sm:text-[2.25rem]">Room Rush</h3>
               <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
-                One of our amazing universes.
+                Boundless Dimensions, Endless Adventures.
               </p>
             </div>
           </a>
 
-          <a href="#" class="flex flex-col justify-center w-full h-full">
-            <div class="w-full h-full mb-3 sm:mb-6">
+          <a
+            href="/projectpu"
+            class="flex flex-col justify-center w-full h-full hover:text-purple-500"
+          >
+            <div class="w-full h-full mb-3 sm:mb-6 hover:scale-105">
               <img
                 alt=""
-                src="/img/wp.webp"
-                class="w-full h-ful object-left rounded-xl"
+                src="/img/portal_unlimited_render_2.webp"
+                class="w-full h-ful object-left"
               />
             </div>
             <div class="w-auto">
-              <h3 class="text-2xl sm:text-[2.25rem]">Weapons Dragons</h3>
+              <h3 class="text-2xl sm:text-[2.25rem]">Portal Unlimited</h3>
               <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
-                One of our amazing Dragons.
+                Evade the Darkness in a Thrilling Escape Adventure.
               </p>
             </div>
           </a>
-
-          <a href="#" class="flex flex-col justify-center w-full h-full">
+          <a
+            href="/work"
+            class="flex flex-col justify-center w-full h-full pr-24"
+          >
             <div
-              class="bg-[#9C44FC] rounded-xl w-full h-[218px] sm:h-[390px] mb-3 sm:mb-6 flex justify-center items-center"
+              class="w-full h-[218px] sm:h-[390px] mb-3 sm:mb-6 hover:scale-105"
             >
-              <p class="text-3xl sm:text-[2.25rem] uppercase">All Games</p>
+              <div
+                class="bg-[#9C44FC] w-full h-full flex justify-center items-center"
+              >
+                <p class="text-5xl sm:text-[4.25rem] uppercase font-black">
+                  All Games
+                </p>
+              </div>
             </div>
             <div class="w-auto">
-              <h3 class="text-2xl sm:text-[2.25rem]">Want more games?</h3>
-              <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
-                check them all here.
+              <h3 class="text-2xl sm:text-[2.25rem]">
+                <span class="hover:text-purple-500">Want more games?</span>
+              </h3>
+              <p
+                class="sm:pt-3 text-lg sm:text-[1.2rem] hover:text-purple-500 opacity-60"
+              >
+                Check all of them here.
               </p>
             </div>
           </a>
         </div>
       </div>
     </div>
-
+    <div class="mt-6"></div>
     <ScrollingText />
-    <footer class="bg-[#9C44FC] py-16">
-      <nav
-        role="navigation"
-        class="flex flex-col items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 max-w-[120rem]"
-      >
-        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-10 sm:gap-8">
-          <li class="flex flex-col">
-            <p class="text-4xl font-black text-white mb-3 sm:mb-6">Socials</p>
-            <a href="#" class="text-xl text-white">Twitter</a>
-            <a href="#" class="text-xl text-white">YouTube</a>
-            <a href="#" class="text-xl text-white">Discord</a>
-            <a href="#" class="text-xl text-white">Facebook</a>
-          </li>
-          <li class="flex flex-col">
-            <p class="text-4xl font-black text-white mb-3 sm:mb-6">Legal</p>
-            <a href="#" class="text-xl text-white">Imprint</a>
-            <a href="#" class="text-xl text-white">Privacy Policy</a>
-            <a href="#" class="text-xl text-white">Terms of Service</a>
-          </li>
-        </ul>
-        <div class="flex justify-center mt-16">
-          <p class="text-white text-opacity-75 text-lg">
-            &copy; EternalCreations2023
-          </p>
-        </div>
-      </nav>
-    </footer>
+    <Footer />
   </div>
 </Layout>
 

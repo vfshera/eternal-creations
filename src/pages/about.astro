@@ -1,126 +1,158 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
-import LocomotiveScroll from "locomotive-scroll";
-import ScrollingText from "../components/ScrollingText.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
   <Navigation />
+
   <div data-scroll-section>
     <div
       data-scroll
       data-scroll-speed="2"
       class="mx-auto mb-16 pb-[200px] px-4 sm:px-6 lg:px-8 max-w-[120rem]"
     >
-      <div class="pt-[100px] pb-10 lg:pb-[200px]">
-        <h1 class="text-5xl lg:text-8xl font-black uppercase">
-          <span class="">About</span>
+      <div data-scroll data-scroll-speed="2" class="pt-[200px] lg:pb-[200px]">
+        <h1 class="text-3xl md:text-4xl lg:text-6xl font-black uppercase">
+          <span class="">Our</span>
+          <span class="text-[#9C44FC]">Story</span>
         </h1>
+        <div class="mt-16">
+          <p class="text-3xl ml-64 mt-10">
+            At Eternal Creations, we're not just a team, we're a global family
+            of creators<br /> united by a shared passion for Minecraft. Since our
+            inception in 2019, <br /> we've cultivated a team brimming with talent
+            and skill, each of us driven by an <br />unwavering desire to
+            redefine Minecraft.
+          </p>
+          <p class="text-3xl ml-64 mt-10">
+            Driven by an unstopable commitment to quality, our ethos is to
+            innovate <br /> and improve with every project. We're not just playing
+            the game we're pushing<br /> its boundaries, shaping the sandbox into
+            stories, worlds, and experiences <br /> that thrill and inspire.
+          </p>
+          <p class="text-3xl ml-64 mt-10">
+            We're young, fresh, and ceaselessly ambitious, creating content <br
+            />that's not only engaging but also a testament to the diversity and
+            unity <br />of our team. This isn't just about building in Minecraft<br
+            /> it's about building connections, community, and a shared vision for
+            <br />the future of gaming. We're Eternal Creations, and this is our
+            journey.
+          </p>
+        </div>
       </div>
+    </div>
 
-      <div>
-        <div class="border-b border-gray-500 border-solid py-8">
-          <a
-            href="#"
-            class="flex justify-evenly flex-col md:flex-row gap-5 md:items-center"
-          >
-            <h2 class="text-4xl lg:text-6xl">Creative Director</h2>
-            <p class="text-lg md:text-xl">
-              Looking for a dream job in the gaming industry? Minecraft
-              Marketplace is the place to be! We're a thriving business
-              dedicated to creating amazing experiences for Minecraft players
-              worldwide.
+    <!---- REMOVE SOME SPACING HERE -->
+
+    <div class="bg-slate-900 py-8">
+      <div class="container mx-auto px-4">
+        <div data-scroll data-scroll-speed="2">
+          <h1 class="text-3xl md:text-4xl lg:text-6xl font-black uppercase">
+            <span class="">Our</span>
+
+            <span class="text-[#9C44FC]">Values</span>
+          </h1>
+          <br />
+          <br />
+          <div class="flex items-start max-w-[70rem] ml-">
+            <br />
+            <p
+              class="text-base md:text-lg leading-8 lg:text-2xl lg:leading-[1.55] pl-1 md:pl-4 border-l-2 md:border-l-4 py-1 md:py-2 md:ml-6 lg:ml-8"
+            >
+              We believe in creating content that not only entertains but also
+              inspires and unites, creating experiences that stand the test of
+              time. Our passion for quality, innovation, and community guides us
+              in our endeavor to shape the future of Minecraft.
             </p>
-          </a>
+          </div>
         </div>
+        <br />
+        <div data-scroll data-scroll-speed="2">
+          <div class="grid grid-cols-2 gap-10 mt-8">
+            <div class="flex flex-col">
+              <div class="relative ml-6">
+                <img
+                  src="/img/innovationd.webp"
+                  alt="Quality"
+                  class="block w-12 h-12 object-top object-cover"
+                />
+              </div>
+              <div class="ml-6">
+                <h3 class="text-3xl font-bold text-[#9C44FC]">Innovation</h3>
+                <p class="text-base mt-1">
+                  Our dedication to innovation sets us apart, pushing the
+                  boundaries<br /> and constantly challenging ourselves to bring
+                  new, unique, and <br />captivating experiences to the
+                  Minecraft universe. Every project is <br />a testament to our
+                  spirit of exploration and creativity.
+                </p>
+              </div>
+            </div>
 
-        <div class="border-b border-gray-500 border-solid py-16">
-          <a
-            href="#"
-            class="flex justify-evenly flex-col md:flex-row gap-5 md:items-center"
-          >
-            <h2 class="text-4xl lg:text-6xl">Director</h2>
-            <p class="text-lg md:text-xl">
-              As a part of our team, you'll have the opportunity to work with a
-              passionate and talented group of individuals who are constantly
-              pushing the boundaries of what's possible in Minecraft. We value
-              creativity, innovation, and a deep understanding of the Minecraft
-              Marketplace.
-            </p>
-          </a>
-        </div>
+            <div class="flex flex-col">
+              <div class="relative ml-8">
+                <img
+                  src="/img/quality1.webp"
+                  alt="Quality"
+                  class="block w-12 h-12 object-top object-cover"
+                />
+              </div>
+              <div class="ml-6">
+                <h3 class="text-3xl font-bold text-[#9C44FC]">Quality</h3>
+                <p class="text-base mt-1">
+                  This is the cornerstone of our work. We pride ourselves on
+                  producing <br /> content that's not only visually stunning but
+                  also rich in functionality<br /> and user experience. Every detail,
+                  no matter how small, contributes to<br /> a well-crafted world
+                  that meets our meticulous standards.
+                </p>
+              </div>
+            </div>
 
-        <div class="border-b border-gray-500 border-solid py-16">
-          <a
-            href="#"
-            class="flex justify-evenly flex-col md:flex-row gap-5 md:items-center"
-          >
-            <h2 class="text-4xl lg:text-6xl">Creative Director</h2>
-            <p class="text-lg md:text-xl">
-              If you're a talented individual with a love for Minecraft and a
-              desire to contribute to the ever-growing Minecraft community, we
-              want to hear from you! Explore our current job openings and join
-              us on this exciting journey of creativity and fun.
-            </p>
-          </a>
+            <div class="flex flex-col">
+              <div class="relative ml-6">
+                <img
+                  src="/img/collab.webp"
+                  alt="Quality"
+                  class="block w-12 h-12 object-top object-cover"
+                />
+              </div>
+              <div class="ml-6">
+                <h3 class="text-3xl font-bold text-[#9C44FC]">Collaboration</h3>
+                <p class="text-base mt-1">
+                  As a diverse, globally-connected team, we understand the power<br
+                  /> of collaboration. By combining our unique perspectives, talents,<br
+                  /> and experiences, we're able to weave together ideas to craft
+                  <br /> intricate, immersive worlds that resonate with a broad audience.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col">
+              <div class="relative ml-6">
+                <img
+                  src="/img/community.webp"
+                  alt="Quality"
+                  class="block w-12 h-12 object-top object-cover"
+                />
+              </div>
+              <div class="ml-6">
+                <h3 class="text-3xl font-bold text-[#9C44FC]">Community</h3>
+                <p class="text-base mt-1">
+                  It is at the heart of what we do. We believe in fostering a
+                  strong connection<br /> with the Minecraft community, engaging
+                  with players, and listening to their feedback.<br /> We're not
+                  just building worlds; we're building a space where players feel<br
+                  /> heard, valued, and united in their shared passion for the game..
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer data-scroll-section class="bg-gray-900 py-16">
-    <div data-scroll class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-3 gap-8">
-        <div class="text-left">
-          <h3 class="text-2xl font-thin">Our Services</h3>
-          <p class="text-xl">Live-Events / Fundraisers / Promotions</p>
-          <p class="text-xl">
-            Game Development / World Creation / Multiplayer Servers
-          </p>
-          <p class="text-xl">3D Animation / 3D Rendering</p>
-        </div>
-        <div class="text-center">
-          <h3 class="text-2xl font-thin">Work with us</h3>
-          <p class="text-xl">eternal@creations.com</p>
-          <p class="text-xl">Thies Boll</p>
-          <p class="text-xl">Director and CEO</p>
-        </div>
-        <div class="text-right">
-          <h3 class="text-2xl font-thin">Legal</h3>
-          <p class="text-xl">Imprint</p>
-          <p class="text-xl">Privacy Policy</p>
-          <p class="text-xl">Terms of Service</p>
-        </div>
-      </div>
-      <form
-        action="#"
-        method="POST"
-        class="grid grid-cols-1 gap-6 sm:grid-cols-2"
-      >
-        <!-- Form fields go here -->
-      </form>
-    </div>
-  </footer>
+  <Footer />
 </Layout>
-
-<script>
-  import LocomotiveScroll from "locomotive-scroll";
-
-  window.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector("[data-scroll-container]");
-
-    if (container) {
-      const scroll = new LocomotiveScroll({
-        el: container,
-        smooth: true, // Enable smooth scrolling
-      });
-
-      // Update Locomotive Scroll on page resize
-      window.addEventListener("resize", () => {
-        scroll.update();
-      });
-    }
-  });
-</script>
