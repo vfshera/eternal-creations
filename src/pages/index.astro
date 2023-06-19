@@ -237,7 +237,7 @@ import Footer from "../components/Footer.astro";
           </a>
           <a
             href="/work"
-            class="flex flex-col justify-center w-full h-full pr-24"
+            class="flex flex-col justify-center w-full h-full pr-24 group/all-games"
           >
             <div
               class="w-full h-[218px] sm:h-[390px] mb-3 sm:mb-6 hover:scale-105"
@@ -250,13 +250,11 @@ import Footer from "../components/Footer.astro";
                 </p>
               </div>
             </div>
-            <div class="w-auto">
+            <div class="w-auto group-hover/all-games:text-purple-500">
               <h3 class="text-2xl sm:text-[2.25rem]">
-                <span class="hover:text-purple-500">Want more games?</span>
+                <span>Want more games?</span>
               </h3>
-              <p
-                class="sm:pt-3 text-lg sm:text-[1.2rem] hover:text-purple-500 opacity-60"
-              >
+              <p class="sm:pt-3 text-lg sm:text-[1.2rem] opacity-60">
                 Check all of them here.
               </p>
             </div>
